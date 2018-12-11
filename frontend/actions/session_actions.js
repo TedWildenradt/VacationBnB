@@ -29,7 +29,7 @@ export const logoutCurrentUser = (user) => ({
   user: {user}
 })
 
-export const receiveSessionErrors = (err) => ({
+export const receiveSessionErrors = (errors) => ({
   type: RECEIVE_SESSION_ERRORS,
-  err
+  errors
 })
