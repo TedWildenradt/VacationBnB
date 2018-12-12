@@ -1,12 +1,17 @@
 .greeting {
   display: flex;
   justify-content: flex-end;
-  
+  z-index: 1;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  align-items: center;
 }
 
 .greeting a {
   padding: 10px;
   text-decoration: none;
+  
 }
 
 #signup-link {
@@ -19,4 +24,21 @@
 
 .greeting a:hover {
   border-bottom: 2px solid black;
+}
+
+#logo {
+  width: 75px;
+  height: 50px;
+}
+
+.greeting div:first-child {
+  margin-right: auto;
+}
+
+.logo {
+  flex: -1;
+}
+
+.logo a:hover {
+  border-bottom: none;
 }

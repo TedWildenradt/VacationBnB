@@ -16,6 +16,7 @@ form input {
   width: 456px;
   height: 24px;
   padding: 10px 22px;
+  border: 1px solid black;
 }
 
 #session-form-button {
