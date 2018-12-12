@@ -9,9 +9,9 @@ const Greeting = ({currentUser, logout}) => {
       <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
-      <Link id="login-link" to="/login">Login</Link>
-      <br />
       <Link id="signup-link" to="/signup">Sign Up</Link>
+      <br />
+      <Link id="login-link" to="/login">Log In</Link>
     </div>
   )
 
@@ -20,8 +20,10 @@ const Greeting = ({currentUser, logout}) => {
       <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
-      <h2>Welcome {currentUser.fname}</h2>
-      <button onClick={logout}>Logout</button>
+      <div className="welcome-message-logged-in">
+        <h2 id="welcome-message">Welcome {currentUser.fname}</h2>
+        <button id="logout-button" onClick={logout}>Logout</button>
+      </div>
     </div>
   )
     // debugger

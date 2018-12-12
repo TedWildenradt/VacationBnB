@@ -3,7 +3,7 @@
   justify-content: flex-end;
   z-index: 1;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   color: white;
   align-items: center;
 }
@@ -11,7 +11,14 @@
 .greeting a {
   padding: 10px;
   text-decoration: none;
-  
+  padding-left: 20px;
+}
+
+.welcome-message-logged-in {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  width: 200px;
 }
 
 #signup-link {
@@ -23,7 +30,11 @@
 }
 
 .greeting a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
+}
+
+.greeting button:hover {
+  border-bottom: 2px solid white;
 }
 
 #logo {
@@ -41,4 +52,12 @@
 
 .logo a:hover {
   border-bottom: none;
+}
+
+#welcome-message {
+  /* padding-right: 30px; */
+}
+
+#logout-button {
+  /* padding-right: 15px; */
 }
