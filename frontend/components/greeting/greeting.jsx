@@ -14,7 +14,7 @@ const Greeting = ({currentUser, logout}) => {
 
   const greetingHeading = () => (
     <div>
-      <h2>Welcome {currentUser.username}</h2>
+      <h2>Welcome {currentUser.fname}</h2>
       <button onClick={logout}>Logout</button>
     </div>
   )

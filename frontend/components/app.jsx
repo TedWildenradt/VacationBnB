@@ -1,10 +1,14 @@
 import React from 'react';
-import NavBar from '../components/navbar/navbar';
+import GreetingContainer from '../components/greeting/greeting_container';
+import LoginFormContainer from '../components/session_form/login_form_container'
+import SignupFormContainer from '../components/session_form/signup_form_container';
 
 const App = () => (
   <div>
     <h1>VacationBnB</h1>
-    <NavBar />
+    <GreetingContainer />
+    <LoginFormContainer />
+
   </div>
 );
 
