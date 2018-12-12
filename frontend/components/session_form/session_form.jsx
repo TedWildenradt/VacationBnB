@@ -31,7 +31,6 @@ class SessionForm extends React.Component {
               <input type="text" value={this.state.lname} onChange={this.handleUpdate('lname')}/>
             </label>
           </div>
-
         )
       } else {
         return(
@@ -49,7 +48,7 @@ class SessionForm extends React.Component {
             <input type="password" value={this.state.password} onChange={this.handleUpdate('password')}/>
           </label>
           <div>
-            {names}
+            {names()}
           </div>
           <input type="submit" value="Submit"/>
         </form>

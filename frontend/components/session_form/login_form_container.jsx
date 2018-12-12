@@ -7,7 +7,8 @@ import {login} from '../../actions/session_actions';
 const mapStateToProps = (state) => {
   return ({
     formType: "Login",
-    user: {email: '', password: ''}
+    user: {email: '', password: ''},
+    errors: state.errors
   })
 }
 
