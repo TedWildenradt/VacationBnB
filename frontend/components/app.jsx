@@ -6,7 +6,7 @@ import {Route} from 'react-router-dom';
 import {AuthRoute} from '../util/route_util'
 
 const App = () => (
-  <div>
+  <div className="modal">
     <GreetingContainer />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />

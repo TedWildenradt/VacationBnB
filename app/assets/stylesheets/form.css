@@ -13,6 +13,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* border-radius: 4px; */
 }
 
 form input {
@@ -64,3 +65,11 @@ form input[type=submit] {
   margin-top: 15px;
   border-radius: 4px;
 }
+
+form ul {
+  /* list-style: disc; */
+  text-align: center;
+  font-size: 14px;
+};
+
+

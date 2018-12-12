@@ -1,0 +1,24 @@
+.modal {
+
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+}
+
+/* 
+.demo-login{
+  color: red !important;
+  background-color: #008489;
+  text-align: center;
+  display: block;
+  width: 456px;
+  height: 24px;
+  padding: 10px 22px;
+  margin-top: 15px;
+  border-radius: 4px;
+} */

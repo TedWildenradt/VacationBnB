@@ -29,6 +29,18 @@ class SessionForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
   render() {
     const names = () => {
@@ -47,20 +59,6 @@ class SessionForm extends React.Component {
         return(
           <p></p>
         )
-      }
-    }
-
-    const renderErrors = () => {
-      if (this.props.errors.length > 0){
-        return(
-          <ul>
-            {this.props.errors.map((error, i) => (
-              <li key={`error-${i}`}>
-                {error}
-              </li>
-            ))}
-          </ul>
-        );
       }
     }
 
@@ -93,7 +91,7 @@ class SessionForm extends React.Component {
 
     
     return(
-      <div>
+      <div >
         <form onSubmit={this.handleSubmit}>
 
             <input type="text" value={this.state.email} onChange={this.handleUpdate('email')} placeholder="Email"/>
@@ -101,7 +99,7 @@ class SessionForm extends React.Component {
             <input type="password" value={this.state.password} onChange={this.handleUpdate('password')} placeholder="Password"/>
           <div>
             {names()}
-            {renderErrors()}
+            {this.renderErrors()}
           </div>
           <input id="session-form-button"type="submit" value={this.props.formType}/>
           {demoLogin()}
