@@ -1,13 +1,14 @@
 class Api::SessionsController < ApplicationController
-  debugger
-  def create
-    user = User.find_by_credentials(params[:user][:email], params[:user][:password])
 
-    if user
-      login(user)
-      redirect_to :root
+  def create
+    @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+
+    if @user
+      login(@user)
+      # redirect_to :root
+      render 'api/users/show'
     else  
-      flash[:errors] = user.errors.full_messages
+      # flash[:errors] = user.errors.full_messages
       render json: ["Invalid Credentials"], status: 412
     end 
   end

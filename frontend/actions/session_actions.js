@@ -21,12 +21,12 @@ export const logout = () => dispatch => (
 
 export const recieveCurrentUser = (user) => ({
   type: RECEIVE_CURRENT_USER,
-  user: {user}
+  user
 })
 
 export const logoutCurrentUser = (user) => ({
   type: LOGOUT_CURRENT_USER,
-  user: {user}
+  user
 })
 
 export const receiveSessionErrors = (errors) => ({
