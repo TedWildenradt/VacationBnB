@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
     })
   }
 
+
   render() {
     const names = () => {
       if (this.props.formType === 'Sign Up'){
@@ -38,6 +39,20 @@ class SessionForm extends React.Component {
         )
       }
     }
+
+    const renderErrors = () => {
+      if (this.props.errors.length > 0){
+        return(
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+    }
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -49,6 +64,7 @@ class SessionForm extends React.Component {
           </label>
           <div>
             {names()}
+            {renderErrors()}
           </div>
           <input type="submit" value="Submit"/>
         </form>

@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       render 'api/users/show'
     else  
       # flash[:errors] = user.errors.full_messages
-      render json: ["Invalid Credentials"], status: 412
+      render json: [@user.errors.full_messages], status: 412
     end 
   end
 

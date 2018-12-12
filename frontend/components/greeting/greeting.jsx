@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const Greeting = ({currentUser, logout}) => {
 
   const sessionbuttons = () => (
-    <div>
+    <div className="greeting-links">
       <Link to="/login">Login</Link>
       <br />
       <Link to="/signup">Sign Up</Link>
@@ -13,7 +13,7 @@ const Greeting = ({currentUser, logout}) => {
   )
 
   const greetingHeading = () => (
-    <div>
+    <div className="greeting-welcome">
       <h2>Welcome {currentUser.fname}</h2>
       <button onClick={logout}>Logout</button>
     </div>
