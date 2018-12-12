@@ -6,7 +6,7 @@ const Greeting = ({currentUser, logout}) => {
 
   const sessionbuttons = () => (
     <div className="greeting greeting-links">
-      <div class="logo">
+      <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <Link id="login-link" to="/login">Login</Link>
@@ -17,7 +17,7 @@ const Greeting = ({currentUser, logout}) => {
 
   const greetingHeading = () => (
     <div className="greeting greeting-welcome">
-      <div class="logo">
+      <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <h2>Welcome {currentUser.fname}</h2>
