@@ -66,7 +66,8 @@ class SessionForm extends React.Component {
             {names()}
             {renderErrors()}
           </div>
-          <input type="submit" value="Submit"/>
+          <input id="session-form-button"type="submit" value="Submit"/>
+          <p></p>
         </form>
       </div>
     )

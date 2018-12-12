@@ -1,0 +1,26 @@
+form {
+  background: white;
+  border: 1px solid grey;
+  box-shadow: ;
+  padding: 32px;
+  font-size: 20px;
+  margin: auto;
+  width: 504px;
+  display: block;
+  z-index: 3;
+  height: 304px;
+}
+
+form input {
+  display: block;
+  width: 456px;
+  height: 24px;
+  padding: 10px 22px;
+}
+
+#session-form-button {
+  display: block;
+  width: 456px;
+  height: 24px;
+  padding: 10px 22px;
+}

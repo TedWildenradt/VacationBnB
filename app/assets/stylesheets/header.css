@@ -1,0 +1,22 @@
+.greeting {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.greeting a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+#signup-link {
+
+}
+
+#login-link {
+
+}
+
+.greeting a:hover {
+  border-bottom: 2px solid black;
+}
