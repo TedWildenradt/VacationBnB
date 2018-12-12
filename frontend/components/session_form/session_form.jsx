@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class SessionForm extends React.Component {
     this.state = props.user 
 
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.demoUser = this.demoUser.bind(this);
   }
 
   handleSubmit(e){
@@ -17,6 +19,14 @@ class SessionForm extends React.Component {
     return e => this.setState({
       [field]: e.target.value
     })
+  }
+
+  demoUser(e){
+    e.preventDefault()
+    this.props.action({
+      email: "email",
+      password: "password"
+    });
   }
 
 
@@ -53,6 +63,35 @@ class SessionForm extends React.Component {
         );
       }
     }
+
+    const alternate = () => {
+      if (this.props.formType === 'Sign Up'){
+        return(
+          <div className="alternate">
+            <p>Already have an account? <Link to="/login">Log In</Link></p>
+          </div>
+        )
+      } else {
+        return(
+          <div className="alternate">
+            <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+        </div>
+        )
+      }
+    }
+
+    const demoLogin = () => {
+      if (this.props.formType !== 'Sign Up') {
+        return(
+          <div className="demo-login">
+            <button onClick={this.demoUser}>Demo Login</button>
+
+          </div>
+        )
+      }
+    }
+
+    
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -65,7 +104,8 @@ class SessionForm extends React.Component {
             {renderErrors()}
           </div>
           <input id="session-form-button"type="submit" value={this.props.formType}/>
-          <p></p>
+          {demoLogin()}
+          {alternate()}
         </form>
       </div>
     )
