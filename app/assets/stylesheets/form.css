@@ -1,6 +1,6 @@
 form {
   background: white;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   /* box-shadow: ; */
   padding: 32px;
   font-size: 20px;
@@ -8,7 +8,11 @@ form {
   width: 504px;
   display: block;
   z-index: 3;
-  height: 304px;
+  min-height: 224px;
+  max-height: 504px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 form input {
@@ -16,7 +20,9 @@ form input {
   width: 456px;
   height: 24px;
   padding: 10px 22px;
-  border: 1px solid black;
+  border: 1px solid grey;
+  margin-top: 15px;
+  border-radius: 4px;
 }
 
 #session-form-button {
@@ -24,4 +30,10 @@ form input {
   width: 456px;
   height: 24px;
   padding: 10px 22px;
+}
+
+form input[type=submit] {
+  text-align: center;
+  background-color: rgb(255, 90, 95);
+  color: white;
 }

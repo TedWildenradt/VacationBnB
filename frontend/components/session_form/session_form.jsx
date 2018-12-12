@@ -25,12 +25,12 @@ class SessionForm extends React.Component {
       if (this.props.formType === 'Sign Up'){
         return(
           <div>
-            <label> First Name:
-              <input type="text" value={this.state.fname} onChange={this.handleUpdate('fname')}/>
-            </label>
-            <label> Last Name:
-              <input type="text" value={this.state.lname} onChange={this.handleUpdate('lname')}/>
-            </label>
+
+              <input type="text" value={this.state.fname} onChange={this.handleUpdate('fname')} placeholder="First Name"/>
+
+
+              <input type="text" value={this.state.lname} onChange={this.handleUpdate('lname')} placeholder="Last Name"/>
+
           </div>
         )
       } else {
@@ -56,17 +56,15 @@ class SessionForm extends React.Component {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label> Email:
-            <input type="text" value={this.state.email} onChange={this.handleUpdate('email')}/>
-          </label>
-          <label> Password:
-            <input type="password" value={this.state.password} onChange={this.handleUpdate('password')}/>
-          </label>
+
+            <input type="text" value={this.state.email} onChange={this.handleUpdate('email')} placeholder="Email"/>
+
+            <input type="password" value={this.state.password} onChange={this.handleUpdate('password')} placeholder="Password"/>
           <div>
             {names()}
             {renderErrors()}
           </div>
-          <input id="session-form-button"type="submit" value="Submit"/>
+          <input id="session-form-button"type="submit" value={this.props.formType}/>
           <p></p>
         </form>
       </div>
