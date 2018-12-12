@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   demoUser(e){
     e.preventDefault()
     this.props.action({
-      email: "number1spy@m16.com",
+      email: "demo@email.com",
       password: "password"
     });
   }
