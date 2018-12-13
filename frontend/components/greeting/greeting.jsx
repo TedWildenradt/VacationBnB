@@ -4,16 +4,18 @@ import {Link} from 'react-router-dom'
 import LoginFormContainer from '../session_form/login_form_container'
 import SignupFormContainer from '../session_form/signup_form_container'
 
-const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, logout, openModal}) => {
 
   const sessionbuttons = () => (
     <div className="greeting greeting-links">
       <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
-      <Link id="signup-link" to="/signup">Sign Up</Link>
+      {/* <Link id="signup-link" to="/signup">Sign Up</Link> */}
+      <button id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button>
       <br />
-      <Link id="login-link" to="/login">Log In</Link>
+      {/* <Link id="login-link" to="/login">Log In</Link> */}
+      <button id="login-link" onClick={() => openModal('Login')}>Log In</button>
     </div>
   )
 

@@ -7,7 +7,7 @@ import {AuthRoute} from '../util/route_util'
 import Modal from './modal/modal';
 
 const App = () => (
-  <div className="modal">
+  <div>
     <Modal />
     <GreetingContainer />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
