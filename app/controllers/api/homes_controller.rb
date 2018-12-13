@@ -25,7 +25,7 @@ class Api::HomesController < ApplicationController
       :state,
       :zip,
       :country,
-      :type,
+      :home_type,
       :bed_count,
       :bathrooms,
       :bedrooms

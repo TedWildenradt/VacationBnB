@@ -10,12 +10,13 @@ ActiveRecord::Base.transaction do
   User.destroy_all
   Home.destroy_all
 
-  User.create(email: 'demo@email.com', password: 'password', fname: 'Demo', lname: 'Login')
-  User.create(email: 'ron@email.com', password: 'password', fname: 'Ron', lname: 'Burgandy')
-  User.create(email: 'ricky@email.com', password: 'password', fname: 'Ricky', lname: 'Bobby')
-  User.create(email: 'michael@email.com', password: 'password', fname: 'Michael', lname: 'Scott')
-  User.create(email: 'rick@email.com', password: 'password', fname: 'Rick', lname: 'Sanchez')
+  user1 = User.create(email: 'demo@email.com', password: 'password', fname: 'Demo', lname: 'Login')
+  user2 = User.create(email: 'ron@email.com', password: 'password', fname: 'Ron', lname: 'Burgandy')
+  user3 = User.create(email: 'ricky@email.com', password: 'password', fname: 'Ricky', lname: 'Bobby')
+  user4 = User.create(email: 'michael@email.com', password: 'password', fname: 'Michael', lname: 'Scott')
+  user5 = User.create(email: 'rick@email.com', password: 'password', fname: 'Rick', lname: 'Sanchez')
 
-  Home.create(owner_id: 1, num_guests: 2, price: 180, city: 'San Francisco', state: 'CA', zip: 94104, country: "US", type: "Apartment", bed_count: 2, bathrooms: 2, bedrooms: 2)
-  Home.create(owner_id: 2, num_guests: 5, price: 320, city: 'San Francisco', state: 'CA', zip: 94117, country: "US", type: "House", bed_count: 5, bathrooms: 3, bedrooms: 5)
+  home1 = Home.create(owner_id: user1.id, num_guests: 2, price: 180, city: 'San Francisco', state: 'CA', zip: 94104, country: "US", home_type: "Apartment", bed_count: 2, bathrooms: 2, bedrooms: 2)
+  home2 = Home.create(owner_id: user2.id, num_guests: 5, price: 320, city: 'San Francisco', state: 'CA', zip: 94117, country: "US", home_type: "House", bed_count: 5, bathrooms: 3, bedrooms: 5)
 end 
+

@@ -4,7 +4,14 @@ import {Link} from 'react-router-dom'
 import LoginFormContainer from '../session_form/login_form_container'
 import SignupFormContainer from '../session_form/signup_form_container'
 
-const Greeting = ({currentUser, logout, openModal}) => {
+const Greeting = ({currentUser, logout, openModal, location}) => {
+  console.log(location)
+
+  if(location.pathname === '/'){
+    document.body.style.backgroundImage = "url(https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";
+  } else {
+    document.body.style.backgroundImage = "none";
+  }
 
   const sessionbuttons = () => (
     <div className="greeting greeting-links">

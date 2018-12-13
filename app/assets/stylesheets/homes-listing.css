@@ -1,0 +1,58 @@
+div.no-background{
+  background-image: none !important;
+}
+
+.homes-listing-container > h3{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.home-index-items-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-index-items-container ul {
+  display: flex;
+  justify-content: space-around;
+}
+.home-thumbnail{
+  width: 328px;
+  height: 309px;
+  padding: 8px 6px 12px 6px;
+  color: rgb(72, 72, 72);
+
+
+}
+
+.photo-thumbnail{
+  width: 328px;
+  height: 219px;
+
+}
+
+.home-thumbnail-points {
+  width: 328px;
+  height: 82px;
+  padding-top: 8px;
+}
+
+.home-thumbnail-type-beds {
+  height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.home-thumbnail-description {
+  height: 18px;
+  font-weight: bold;
+}
+
+.home-thumbnail-price{
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.home-thumbnail-rating{
+  height: 22px;
+}
