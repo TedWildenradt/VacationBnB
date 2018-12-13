@@ -40,6 +40,16 @@ form input[type=submit] {
   color: white;
 }
 
+form input[type=submit]:focus {
+  border: 1px solid rgba(81, 203, 238, 1);
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+form input:focus {
+  border: 1px solid #008489;
+}
+
+
 .alternate {
   font-size: 18px;
   text-align: center;

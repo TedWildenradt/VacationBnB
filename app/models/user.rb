@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :homes,
+    foreign_key: :owner_id,
+    class_name: :Home
+
   def self.generate_session_token
     SecureRandom.urlsafe_base64
   end
