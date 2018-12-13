@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
     this.props.action({
       email: "demo@email.com",
       password: "password"
-    });
+    }).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -66,13 +66,15 @@ class SessionForm extends React.Component {
       if (this.props.formType === 'Sign Up'){
         return(
           <div className="alternate">
-            <p>Already have an account? <Link to="/login">Log In</Link></p>
+            {/* <p>Already have an account? <Link to="/login">Log In</Link></p> */}
+            <p>Already have an account? <button onClick={() => this.props.openModal('Login')}>Login</button></p>
           </div>
         )
       } else {
         return(
           <div className="alternate">
-            <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+            {/* <p>Don't have an account? <Link to="/signup">Sign Up</Link></p> */}
+            <p>Don't have an account? <button onClick={() => this.props.openModal('Sign Up')}>Sign Up</button></p>
         </div>
         )
       }
