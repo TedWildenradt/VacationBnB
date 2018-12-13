@@ -6,19 +6,29 @@
   font-size: 14px;
   color: white;
   align-items: center;
+  height: 80px;
 }
 
-.greeting a {
+.greeting button {
   padding: 10px;
   text-decoration: none;
   padding-left: 20px;
+}
+
+.logged-out {
+  display: flex;
+
 }
 
 .welcome-message-logged-in {
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  width: 200px;
+  width: 275px;
+}
+
+#welcome-message {
+  vertical-align: text-bottom; 
 }
 
 #signup-link {
@@ -61,3 +71,4 @@
 #logout-button {
   /* padding-right: 15px; */
 }
+

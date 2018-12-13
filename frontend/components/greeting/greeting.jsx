@@ -11,11 +11,11 @@ const Greeting = ({currentUser, logout, openModal}) => {
       <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
-      {/* <Link id="signup-link" to="/signup">Sign Up</Link> */}
-      <button id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button>
-      <br />
-      {/* <Link id="login-link" to="/login">Log In</Link> */}
-      <button id="login-link" onClick={() => openModal('Login')}>Log In</button>
+      <ul className="logged-out">
+        <li><button id="explore" >Explore Available Homes</button></li>
+        <li><button id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button></li>  
+        <li><button id="login-link" onClick={() => openModal('Login')}>Log In</button></li>
+      </ul>
     </div>
   )
 
@@ -24,10 +24,10 @@ const Greeting = ({currentUser, logout, openModal}) => {
       <div className="logo">
         <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
-      <div className="welcome-message-logged-in">
-        <h2 id="welcome-message">Welcome {currentUser.fname}</h2>
-        <button id="logout-button" onClick={logout}>Logout</button>
-      </div>
+      <ul className="welcome-message-logged-in">
+        <li><button id="explore" >Explore Available Homes</button></li>
+        <li><button id="logout-button" onClick={logout}>Logout</button></li>
+      </ul>
     </div>
   )
     // debugger

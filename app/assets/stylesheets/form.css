@@ -14,6 +14,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   /* border-radius: 4px; */
+  /* box-sizing: border-box; */
 }
 
 form input {
@@ -44,14 +45,17 @@ form input[type=submit] {
   text-align: center;
   padding: 10px;
   color: grey;
+  /* box-sizing: border-box;
+  min-height: 40px; */
 }
 
-.alternate a {
+.alternate button {
   color: #008489;
 }
 
-.alternate a:hover {
-  border-bottom: 2px solid #008489;
+.alternate button:hover {
+  /* border-bottom: 2px solid #008489; */
+  text-decoration: underline;
 }
 
 .demo-login{
