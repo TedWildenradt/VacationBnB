@@ -42,6 +42,9 @@
 .greeting a:hover {
   border-bottom: 2px solid white;
 }
+.greeting button {
+  border-bottom: 2px solid transparent;
+}
 
 .greeting button:hover {
   border-bottom: 2px solid white;
