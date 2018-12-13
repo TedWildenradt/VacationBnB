@@ -9,6 +9,11 @@ class Api::HomesController < ApplicationController
 
   def create
     @home = Home.new(home_params)
+    if @home.save
+      render "api/homes/show"
+    else
+      render json: @home.errors.full_messages, status: 404
+    end 
   end
 
   private
