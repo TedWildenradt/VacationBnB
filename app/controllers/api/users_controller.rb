@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
     else 
       # flash[:errors] = @user.errors.full_messages
-      render json: ['Invalid parameters'], status: 404
+      render json: @user.errors.full_messages, status: 404
     end 
   end
 
