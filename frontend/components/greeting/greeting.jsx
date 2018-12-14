@@ -70,7 +70,7 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
   const headingOptions = currentUser ? greetingHeading() : sessionbuttons();
 
   return(
-    <div>
+    <div className="sticky">
       
       {headingOptions}
     </div>

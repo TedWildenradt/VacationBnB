@@ -32,10 +32,10 @@ class HomeShow extends React.Component {
               <p>{this.props.home.city}</p>
             <div className="show-home-beds-baths">
               <ul>
-                <li>{this.props.home.num_guests}<i className="fas fa-male"></i> Guests</li>
-                <li>{this.props.home.bedrooms}<i className="fas fa-home"> Bedroom</i></li>
-                <li>{this.props.home.bed_count}<i className="fas fa-bed"></i> Beds</li>
-                <li>{this.props.home.bathrooms}<i className="fas fa-shower"></i> Bathrooms</li>
+                <li><i className="fas fa-male"></i> {this.props.home.num_guests} Guests</li>
+                <li><i className="fas fa-home"> {this.props.home.bedrooms} Bedroom</i></li>
+                <li><i className="fas fa-bed"></i> {this.props.home.bed_count} Beds</li>
+                <li><i className="fas fa-shower"></i> {this.props.home.bathrooms} Bathrooms</li>
               </ul>
               <hr/>
             </div>
@@ -45,13 +45,13 @@ class HomeShow extends React.Component {
               {/* <hr/> */}
             </div>
             <div className="show-home-amenities">
-              <p>Amenities</p>
+              <h4>Amenities</h4>
                 <ul>
-                  <li><i class="fas fa-wifi"></i>Wifi</li>
-                  <li><i class="fas fa-utensils"></i>Kitchen</li>
-                  <li><i class="fas fa-tv"></i>TV</li>
-                  <li><i class="fas fa-align-center"></i>Essentials</li>
-                  <li><i class="fas fa-laptop"></i>Laptop Friendly Workspace</li>
+                  <li><i className="fas fa-wifi"></i>Wifi</li>
+                  <li><i className="fas fa-utensils"></i>Kitchen</li>
+                  <li><i className="fas fa-tv"></i>TV</li>
+                  <li><i className="fas fa-align-center"></i>Essentials</li>
+                  <li><i className="fas fa-laptop"></i>Laptop Friendly Workspace</li>
                   <li></li>
                 </ul>
               <hr/>

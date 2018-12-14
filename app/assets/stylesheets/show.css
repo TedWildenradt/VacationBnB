@@ -7,8 +7,26 @@
   margin: auto;
 }
 
+.show-home-type {
+  font-size: 14px;
+  font-weight: 400;
+}
 
+.show-home-title {
+  margin: 15px 0;
+}
 
+.show-home-city {
+  margin: 10px 0;
+}
+
+.show-home-beds-baths ul{
+  display: flex;
+  margin: 10px 0;
+}
+.show-home-beds-baths ul li{
+  padding-right: 15px;
+}
 
 
 .show-home-description {
@@ -16,9 +34,23 @@
   border-bottom: lightgrey;
 }
 
-.show-home-amenities {
+.show-home-amenities h4 {
+  font-weight: 700;
+}
+
+.show-home-amenities ul {
   min-height: 225px;
+  max-height: 225px;
   border-bottom: lightgrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.show-home-amenities ul li {
+  width: 49%;
+  margin: 10px;
+  padding: 10px;
 }
 
 .show-booking-calendar {
