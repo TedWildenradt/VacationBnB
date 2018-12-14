@@ -1,22 +1,46 @@
 // import Logo from '../../../app/assets/images/';
 import React from 'react';
 import {Link} from 'react-router-dom'
+import Lifecycle from 'react-pure-lifecycle';
 // import LoginFormContainer from '../session_form/login_form_container'
 // import SignupFormContainer from '../session_form/signup_form_container'
 
+const componentDidUpdate = ({location}) => {
+  if(location.pathname === '/'){
+    document.getElementsByClassName("greeting")[0].style.color = "white";
+  } else {
+    document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
+  }
+  
+};
+const componentDidMount = ({location}) => {
+  if(location.pathname === '/'){
+    document.getElementsByClassName("greeting")[0].style.color = "white";
+  }
+  
+};
+
+
+const methods = {
+  componentDidUpdate,
+  componentDidMount
+};
+
 const Greeting = ({currentUser, logout, openModal, location}) => {
-  console.log(location)
+  // console.log(location)
 
   if(location.pathname === '/'){
     document.body.style.backgroundImage = "url(https://s3-us-west-1.amazonaws.com/vacationbnb-dev/airbnb_backsplash.jpg)";
+    // document.getElementsByClassName("greeting")[0].style.color = "grey"
   } else {
     document.body.style.backgroundImage = "none";
   }
 
+
   const sessionbuttons = () => (
     <div className="greeting greeting-links">
       <div className="logo">
-        <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
+        <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <ul className="logged-out">
         <li><button id="explore" >Explore Available Homes</button></li>
@@ -29,7 +53,7 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
   const greetingHeading = () => (
     <div className="greeting greeting-welcome">
       <div className="logo">
-        <Link to="/"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
+        <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <ul className="welcome-message-logged-in">
         <li><button id="explore" >Explore Available Homes</button></li>
@@ -51,4 +75,5 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
 }
 
 
-export default Greeting;
+// export default Greeting;
+export default Lifecycle(methods)(Greeting)
