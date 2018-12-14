@@ -10,11 +10,14 @@ div.no-background{
 .home-index-items-container {
   display: flex;
   justify-content: space-around;
+  width: 1200px;
 }
 
 .home-index-items-container ul {
   display: flex;
   justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
 }
 .home-thumbnail{
   width: 328px;

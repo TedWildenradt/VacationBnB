@@ -18,5 +18,14 @@ ActiveRecord::Base.transaction do
 
   home1 = Home.create(owner_id: user1.id, num_guests: 2, price: 180, city: 'San Francisco', state: 'CA', zip: 94104, country: "US", home_type: "Apartment", bed_count: 2, bathrooms: 2, bedrooms: 2)
   home2 = Home.create(owner_id: user2.id, num_guests: 5, price: 320, city: 'San Francisco', state: 'CA', zip: 94117, country: "US", home_type: "House", bed_count: 5, bathrooms: 3, bedrooms: 5)
+  home3 = Home.create(owner_id: user2.id, num_guests: 4, price: 250, city: 'San Francisco', state: 'CA', zip: 94113, country: "US", home_type: "House", bed_count: 4, bathrooms: 3, bedrooms: 4)
+  home4 = Home.create(owner_id: user2.id, num_guests: 3, price: 190, city: 'San Francisco', state: 'CA', zip: 94116, country: "US", home_type: "House", bed_count: 3, bathrooms: 1, bedrooms: 3)
+  home5 = Home.create(owner_id: user2.id, num_guests: 3, price: 320, city: 'San Francisco', state: 'CA', zip: 94117, country: "US", home_type: "House", bed_count: 3, bathrooms: 1, bedrooms: 3)
+
+  home1.photo.attach(io: File.open('app/assets/images/first_home_picture.jpg'), filename: 'first_home_picture.jpg')
+  home2.photo.attach(io: File.open('app/assets/images/home2.jpg'), filename: 'home2.jpg')
+  home3.photo.attach(io: File.open('app/assets/images/home3.jpg'), filename: 'home3.jpg')
+  home4.photo.attach(io: File.open('app/assets/images/home4.jpg'), filename: 'home4.jpg')
+  home5.photo.attach(io: File.open('app/assets/images/home5.jpg'), filename: 'home5.jpg')
 end 
 

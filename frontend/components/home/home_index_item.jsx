@@ -6,7 +6,8 @@ const HomeIndexItem = ({home}) => (
     <div className="home-thumbnail">
       <Link to={`api/homes/${home.id}`}>
       <div className="photo-thumbnail">
-        <h1>Photo of Home</h1>
+        {/* <h1>Photo of Home</h1> */}
+        <img src={home.photoUrl} alt="home"/>
       </div>
       <div className="home-thumbnail-points">
         <div className="home-thumbnail-type-beds">

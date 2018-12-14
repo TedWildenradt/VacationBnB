@@ -7,5 +7,5 @@ class Home < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-  
+  has_one_attached :photo
 end
