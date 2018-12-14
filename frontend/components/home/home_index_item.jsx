@@ -14,7 +14,7 @@ const HomeIndexItem = ({home}) => (
           <h5>{home.home_type.toUpperCase()} &#8226; {home.bed_count} BEDS</h5>
         </div>
         <div className="home-thumbnail-description">
-          <h3>some description</h3>
+          <h3>{home.title}</h3>
         </div>
         <div className="home-thumbnail-price">
           <h5>${home.price} per night &#8226; Free cancellation</h5>

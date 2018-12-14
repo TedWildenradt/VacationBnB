@@ -13,4 +13,19 @@
 
 .show-home-description {
   min-height: 225px;
+  border-bottom: lightgrey;
+}
+
+.show-home-amenities {
+  min-height: 225px;
+  border-bottom: lightgrey;
+}
+
+.show-booking-calendar {
+  min-height: 444px;
+  border-bottom: lightgrey;
+}
+
+.show-reviews-container {
+  min-height: 500px;
 }
