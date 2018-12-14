@@ -5,6 +5,7 @@ class HomeShow extends React.Component {
   constructor(props){
     super(props)
     this.state = this.props.home
+    // debugger
   }
 
   componentDidMount() {
@@ -12,18 +13,23 @@ class HomeShow extends React.Component {
   }
 
   render () {
+    // debugger
     return (
       <div>
         <div className="show-photos-container">
-          <img src={this.state.photoUrl} alt="home"/>
+          <img src={this.props.home.photoUrl} alt="home"/>
+
         </div>
         <div className="show-content-container">
           <div className="show-content-information">
+            <div className="show-home-type">
+              <h3>{this.props.home.home_type}</h3>
+            </div>
             <div className="show-home-title">
               <p>Home Title</p>
             </div>
             <div className="show-home-city">
-              <p>{this.state.city}</p>
+              <p>{this.props.home.city}</p>
             <div className="show-home-beds-baths">
               <p>List of beds/baths</p>
               <hr/>

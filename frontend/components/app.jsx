@@ -14,8 +14,8 @@ const App = () => (
     <GreetingContainer />
     <Switch> 
       <Route exact path="/" />
+      <Route exact path="/homes/:id" component={HomeShowContainer}/>
       <Route exact path="/homes" component={HomeIndexContainer}/>
-      <Route path="/homes/:id" component={HomeShowContainer}/>
     </Switch>
   </div>
 );

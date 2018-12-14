@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const HomeIndexItem = ({home}) => (
   <li>
     <div className="home-thumbnail">
-      <Link to={`api/homes/${home.id}`}>
+      <Link to={`homes/${home.id}`}>
       <div className="photo-thumbnail">
         {/* <h1>Photo of Home</h1> */}
         <img src={home.photoUrl} alt="home"/>

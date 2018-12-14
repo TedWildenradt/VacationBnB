@@ -1,0 +1,16 @@
+.show-photos-container img {
+  max-height: 468px;
+}
+
+.show-content-information {
+  max-width: 670px;
+  margin: auto;
+}
+
+
+
+
+
+.show-home-description {
+  min-height: 225px;
+}

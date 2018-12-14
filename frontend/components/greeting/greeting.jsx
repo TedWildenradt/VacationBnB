@@ -8,15 +8,18 @@ import Lifecycle from 'react-pure-lifecycle';
 const componentDidUpdate = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
+    document.getElementsByClassName("greeting-links")[0].style.borderBottom = "none"
   } else {
     document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
+    document.getElementsByClassName("greeting-links")[0].style.borderBottom = "1px solid lightgrey"
   }
   
 };
 const componentDidMount = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
-  }
+    document.getElementsByClassName("greeting-links")[0].style.borderBottom = "none"
+  } 
   
 };
 
@@ -43,9 +46,9 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
         <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <ul className="logged-out">
-        <li><button id="explore" >Explore Available Homes</button></li>
-        <li><button id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button></li>  
-        <li><button id="login-link" onClick={() => openModal('Login')}>Log In</button></li>
+        <li><button><Link className="color-change" to="/homes" id="explore" >Explore Available Homes</Link></button></li>
+        <li><button className="color-change" id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button></li>  
+        <li><button className="color-change" id="login-link" onClick={() => openModal('Login')}>Log In</button></li>
       </ul>
     </div>
   )
@@ -56,8 +59,8 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
         <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
       <ul className="welcome-message-logged-in">
-        <li><button id="explore" >Explore Available Homes</button></li>
-        <li><button id="logout-button" onClick={logout}>Logout</button></li>
+        <li><button className="color-change"><Link to="/homes" id="explore" >Explore Available Homes</Link></button></li>
+        <li><button className="color-change" id="logout-button" onClick={logout}>Logout</button></li>
       </ul>
     </div>
   )

@@ -20,6 +20,12 @@
   display: flex;
 
 }
+/* 
+#explore {
+  padding: 10px;
+  text-decoration: none;
+  padding-left: 20px;
+} */
 
 .welcome-message-logged-in {
   display: flex;
@@ -40,10 +46,6 @@
 
 }
 
-.greeting a:hover {
-  /* border-bottom: 2px solid white; */
-  border-bottom: 2px solid rgb(72, 72, 72);
-}
 .greeting button {
   border-bottom: 2px solid transparent;
 }
@@ -78,3 +80,6 @@
   /* padding-right: 15px; */
 }
 
+.greeting-links {
+  border-bottom: 1px solid lightgrey;
+}

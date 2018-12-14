@@ -1,4 +1,5 @@
 import {RECEIVE_ALL_HOMES, RECEIVE_HOME} from '../actions/home_actions';
+import merge from 'lodash/merge';
 
 const homesReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -6,7 +7,7 @@ const homesReducer = (state = {}, action) => {
     case RECEIVE_ALL_HOMES:
       return action.homes
     case RECEIVE_HOME:
-      return Object.assign({}, state, {[action.home.id]: action.home})
+      return merge({}, state, {[action.home.id]: action.home})
     default:
       return state;
   }

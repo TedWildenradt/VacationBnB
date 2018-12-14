@@ -5,17 +5,19 @@ import {fetchHome} from '../../actions/home_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
-  let home = this.state.homes[ownProps.match.params.id]
+  // debugger
+  // let home = state.entities.homes[ownProps.match.params.id]
+  // debugger
   return ({
-    home: home
+    home: state.entities.homes[ownProps.match.params.id] || {}
   })
 }
 
-const mapdispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
 
   return ({
     fetchHome: (id) => dispatch(fetchHome(id))
   }) 
 }
 
-export default connect(mapStateToProps, mapdispatchToProps)(HomeShow);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeShow);
