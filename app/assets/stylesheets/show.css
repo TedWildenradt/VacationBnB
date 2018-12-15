@@ -10,15 +10,20 @@
 }
 
 .show-home-type {
+
   font-size: 14px;
   font-weight: 400;
 }
+
+.show-home-type h3 {
+  font-weight: 700;
+};
 
 .show-home-title {
   margin: 15px 0;
 }
 .show-home-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
 }
 
@@ -27,7 +32,7 @@
 }
 .show-home-city p {
 
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .show-home-beds-baths ul{

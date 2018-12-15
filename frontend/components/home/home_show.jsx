@@ -48,11 +48,11 @@ class HomeShow extends React.Component {
               <hr/>
               <h4>Amenities</h4>
                 <ul>
-                  <li><i className="fas fa-wifi"></i>Wifi</li>
-                  <li><i className="fas fa-utensils"></i>Kitchen</li>
-                  <li><i className="fas fa-tv"></i>TV</li>
-                  <li><i className="fas fa-align-center"></i>Essentials</li>
-                  <li><i className="fas fa-laptop"></i>Laptop Friendly Workspace</li>
+                  <li><i className="fas fa-wifi"></i>  Wifi</li>
+                  <li><i className="fas fa-utensils"></i>  Kitchen</li>
+                  <li><i className="fas fa-tv"></i>  TV</li>
+                  <li><i className="fas fa-align-center"></i>  Essentials</li>
+                  <li><i className="fas fa-laptop"></i>  Laptop Friendly Workspace</li>
                   <li></li>
                 </ul>
               <hr/>

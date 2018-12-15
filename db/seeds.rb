@@ -23,9 +23,33 @@ ActiveRecord::Base.transaction do
   home5 = Home.create(owner_id: user2.id, num_guests: 3, price: 320, city: 'San Francisco', state: 'CA', zip: 94117, country: "US", home_type: "House", bed_count: 3, bathrooms: 1, bedrooms: 3, title: "Convenient Three Bedroom", description: "The guest apartment has its own entrance located on the ground level of our home. The private apartment is 720 sq ft and has 8 ft ceilings. The living room and kitchen are new as of 2013 and the bath and the two bedrooms are remodeled.")
 
   home1.photo.attach(io: File.open('app/assets/images/first_home_picture.jpg'), filename: 'first_home_picture.jpg')
+  home1.photo.attach(io: File.open('app/assets/images/home1_2.jpg'), filename: 'home1_2.jpg')
+  home1.photo.attach(io: File.open('app/assets/images/home1_3.jpg'), filename: 'home1_3.jpg')
+  home1.photo.attach(io: File.open('app/assets/images/home1_4.jpg'), filename: 'home1_4.jpg')
+  home1.photo.attach(io: File.open('app/assets/images/home1_5.jpg'), filename: 'home1_5.jpg')
+
   home2.photo.attach(io: File.open('app/assets/images/home2.jpg'), filename: 'home2.jpg')
+  home2.photo.attach(io: File.open('app/assets/images/home2_2.jpg'), filename: 'home2_2.jpg')
+  home2.photo.attach(io: File.open('app/assets/images/home2_3.jpg'), filename: 'home2_3.jpg')
+  home2.photo.attach(io: File.open('app/assets/images/home2_4.jpg'), filename: 'home2_4.jpg')
+  home2.photo.attach(io: File.open('app/assets/images/home2_5.jpg'), filename: 'home2_5.jpg')
+
   home3.photo.attach(io: File.open('app/assets/images/home3.jpg'), filename: 'home3.jpg')
+  home3.photo.attach(io: File.open('app/assets/images/home3_2.jpg'), filename: 'home3_2.jpg')
+  home3.photo.attach(io: File.open('app/assets/images/home3_3.jpg'), filename: 'home3_3.jpg')
+  home3.photo.attach(io: File.open('app/assets/images/home3_4.jpg'), filename: 'home3_4.jpg')
+  home3.photo.attach(io: File.open('app/assets/images/home3_5.jpg'), filename: 'home3_5.jpg')
+  
   home4.photo.attach(io: File.open('app/assets/images/home4.jpg'), filename: 'home4.jpg')
+  home4.photo.attach(io: File.open('app/assets/images/home4_2.jpg'), filename: 'home4_2.jpg')
+  home4.photo.attach(io: File.open('app/assets/images/home4_3.jpg'), filename: 'home4_3.jpg')
+  home4.photo.attach(io: File.open('app/assets/images/home4_4.jpg'), filename: 'home4_4.jpg')
+  home4.photo.attach(io: File.open('app/assets/images/home4_5.jpg'), filename: 'home4_5.jpg')
+
   home5.photo.attach(io: File.open('app/assets/images/home5.jpg'), filename: 'home5.jpg')
+  home5.photo.attach(io: File.open('app/assets/images/home5_2.jpg'), filename: 'home5_2.jpg')
+  home5.photo.attach(io: File.open('app/assets/images/home5_3.jpg'), filename: 'home5_3.jpg')
+  home5.photo.attach(io: File.open('app/assets/images/home5_4.jpg'), filename: 'home5_4.jpg')
+  home5.photo.attach(io: File.open('app/assets/images/home5_5.jpg'), filename: 'home5_5.jpg')
 end 
 
