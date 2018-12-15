@@ -8,10 +8,15 @@
   object-fit: cover;
 }
 
+.show-photos-container ul li:hover {
+  /* -webkit-filter: brightness(70%); */
+}
+
+
 .show-photos-container ul li img {
   object-fit: cover;
   height: 100%;
-  opacity: .8;
+  /* opacity: .8; */
 }
 
 .show-photos-container ul li {
@@ -22,7 +27,8 @@
   transform: scale(1.05);
   overflow: hidden;
   object-fit: cover;
-  opacity: 1;
+  /* opacity: 1; */
+  -webkit-filter: brightness(105%);
 }
 
 .photo-1 {

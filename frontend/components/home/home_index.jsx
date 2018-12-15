@@ -20,8 +20,8 @@ class HomeIndex extends React.Component{
     })
     return(
       <div className="homes-listing-container no-background">
-        <h3>Where to Stay</h3>
         <div className="home-index-items-container">
+          <h3>Where to Stay</h3>
           <ul>
             {homeItems}
           </ul>

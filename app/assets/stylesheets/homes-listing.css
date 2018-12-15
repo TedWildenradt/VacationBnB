@@ -2,20 +2,22 @@ div.no-background{
   background-image: none !important;
 }
 
-.homes-listing-container > h3{
+.home-index-items-container > h3{
   font-weight: bold;
   font-size: 24px;
+  margin: 10px 0;
 }
  
 .home-index-items-container {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  /* justify-content: space-around; */
   width: 1500px;
+  margin: auto;
 }
 
 .home-index-items-container ul {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   margin: auto;
   flex-wrap: wrap;
 }
