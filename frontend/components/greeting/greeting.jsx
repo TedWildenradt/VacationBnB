@@ -9,10 +9,18 @@ const componentDidUpdate = ({location}) => {
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
+    var divs = document.querySelectorAll('.greeting');
+    for (var i = 0; i < divs.length; i++) {
+    divs[i].classList.add('white');
+    }
   } else {
     document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid lightgrey"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "white"
+    var divs = document.querySelectorAll('.white');
+    for (var i = 0; i < divs.length; i++) {
+    divs[i].classList.remove('white');
+    }
   }
   
 };
@@ -21,6 +29,10 @@ const componentDidMount = ({location}) => {
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
+    var divs = document.querySelectorAll('.greeting');
+    for (var i = 0; i < divs.length; i++) {
+    divs[i].classList.add('white');
+    }
   } 
   
 };
