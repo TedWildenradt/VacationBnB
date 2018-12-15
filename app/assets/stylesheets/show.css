@@ -1,14 +1,55 @@
+/* Photos section */
 .show-photos-container ul {
-  max-height: 468px;
+  max-height: 550px;
   display: grid;
   grid-template-columns: 50% 25% 25%;
   grid-template-rows: 50% 50%;
+  /* overflow: hidden; */
+  object-fit: cover;
 }
 
+.show-photos-container ul li img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.photo-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  
+}
+
+.photo-2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  
+}
+
+.photo-3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  
+}
+
+.photo-4 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  
+}
+
+.photo-5 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  
+}
+
+
+/* Content section */
 .show-content-information {
   max-width: 670px;
   margin: auto;
   color: rgb(72, 72, 72);
+  margin-top: 20px;
 
 }
 

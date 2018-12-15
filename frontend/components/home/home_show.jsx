@@ -16,10 +16,18 @@ class HomeShow extends React.Component {
     // debugger
     return (
       <div>
-        <div className="show-photos-container">
-          <img src={this.props.home.photoUrls[0]} alt="home"/>
 
+        <div className="show-photos-container">
+          {/* <img src={this.props.home.photoUrls[0]} alt="home"/> */}
+          <ul className="photo-grid">
+            <li className="photo-1"><img src={this.props.home.photoUrls[0]} alt="home"/></li>
+            <li className="photo-2"><img src={this.props.home.photoUrls[1]} alt="home"/></li>
+            <li className="photo-3"><img src={this.props.home.photoUrls[2]} alt="home"/></li>
+            <li className="photo-4"><img src={this.props.home.photoUrls[3]} alt="home"/></li>
+            <li className="photo-5"><img src={this.props.home.photoUrls[4]} alt="home"/></li>
+          </ul>
         </div>
+        
         <div className="show-content-container">
           <div className="show-content-information">
             <div className="show-home-type">
