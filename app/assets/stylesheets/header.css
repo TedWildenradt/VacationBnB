@@ -23,9 +23,10 @@ div.sticky {
 }
 
 .greeting button {
-  padding: 10px;
+  /* padding: 10px; */
   text-decoration: none;
-  padding-left: 20px;
+  margin-left: 30px;
+  padding-bottom: 10px;
 }
 
 .logged-out {
