@@ -88,5 +88,51 @@ ActiveRecord::Base.transaction do
   home9.photos.attach(io: File.open('app/assets/images/home9_4.jpg'), filename: 'home9_4.jpg')
   home9.photos.attach(io: File.open('app/assets/images/home9_5.jpg'), filename: 'home9_5.jpg')
 
+  home10.photos.attach(io: File.open('app/assets/images/home10.jpg'), filename: 'home10.jpg')
+  home10.photos.attach(io: File.open('app/assets/images/home10_2.jpg'), filename: 'home10_2.jpg')
+  home10.photos.attach(io: File.open('app/assets/images/home10_3.jpg'), filename: 'home10_3.jpg')
+  home10.photos.attach(io: File.open('app/assets/images/home10_4.jpg'), filename: 'home10_4.jpg')
+  home10.photos.attach(io: File.open('app/assets/images/home10_5.jpg'), filename: 'home10_5.jpg')
+
+
+  # New York Homes
+  home11 = Home.create(owner_id: user4.id, num_guests: 5, price: 180, city: 'New York', state: 'NY', zip: 10004, country: "US", home_type: "Private Room in Loft", bed_count: 3, bathrooms: 2, bedrooms: 1, title: 'Manhattan Luxury', description: "Downtown, the best bit of Manhattan. One of, if not the, LARGEST space on available in NYC. Your Own PRIVATE Bathroom & PRIVATE Bedroom, a Terrace off the bedroom, near to subways/buses, restaurants, bars, real luxury right in the middle of things.")
+  home12 = Home.create(owner_id: user4.id, num_guests: 1, price: 90, city: 'New York', state: 'NY', zip: 10019, country: "US", home_type: "Private Room in Apartment", bed_count: 1, bathrooms: 1, bedrooms: 1, title: 'City Experience', description: "Cozy, warm atmosphere, perfect for the traveler looking for a real NY experience.This reservation is for one person. If you want to book for 2 guests it is an extra $100 per night. Best neighborhood in midtown Manhattan for the best price. In the hub of Hell's Kitchen nightlife, restaurants, theaters, museums.")
+  home13 = Home.create(owner_id: user4.id, num_guests: 2, price: 75, city: 'New York', state: 'NY', zip: 10003, country: "US", home_type: "Private Room in Apartment", bed_count: 1, bathrooms: 1, bedrooms: 1, title: 'Sunny and Modern', description: "This clean and very comfortable room in the East Village has spectacular views of downtown Manhattan and is a block away from Tompkins Square Park. Am always excited to share the space with guests! Thanks for taking a look.")
+  home14 = Home.create(owner_id: user4.id, num_guests: 10, price: 400, city: 'New York', state: 'NY', zip: 10013, country: "US", home_type: "Entire Loft", bed_count: 3, bathrooms: 2, bedrooms: 3, title: 'Tribeca Loft', description: "2500 square feet TriBeCa loft with 13-feet exposed beam ceilings, hardwood floors and over-sized windows. Three bedrooms, two bathrooms, large kitchen, washer/dryer, art, and modern furnishings.")
+  home15 = Home.create(owner_id: user4.id, num_guests: 4, price: 90, city: 'New York', state: 'NY', zip: 10012, country: "US", home_type: "Private Room in Apartment", bed_count: 2, bathrooms: 1, bedrooms: 1, title: 'Soho Loft with Massive Couch', description: "2500 square feet TriBeCa loft with 13-feet exposed beam ceilings, hardwood floors and over-sized windows. Three bedrooms, two bathrooms, large kitchen, washer/dryer, art, and modern furnishings.")
+
+
+  # New York Home Photos
+  home11.photos.attach(io: File.open('app/assets/images/home11.jpg'), filename: 'home11.jpg')
+  home11.photos.attach(io: File.open('app/assets/images/home11_2.jpg'), filename: 'home11_2.jpg')
+  home11.photos.attach(io: File.open('app/assets/images/home11_3.jpg'), filename: 'home11_3.jpg')
+  home11.photos.attach(io: File.open('app/assets/images/home11_4.jpg'), filename: 'home11_4.jpg')
+  home11.photos.attach(io: File.open('app/assets/images/home11_5.jpg'), filename: 'home11_5.jpg')
+
+  home12.photos.attach(io: File.open('app/assets/images/home12.jpg'), filename: 'home12.jpg')
+  home12.photos.attach(io: File.open('app/assets/images/home12_2.jpg'), filename: 'home12_2.jpg')
+  home12.photos.attach(io: File.open('app/assets/images/home12_3.jpg'), filename: 'home12_3.jpg')
+  home12.photos.attach(io: File.open('app/assets/images/home12_4.jpg'), filename: 'home12_4.jpg')
+  home12.photos.attach(io: File.open('app/assets/images/home12_5.jpg'), filename: 'home12_5.jpg')
+
+  home13.photos.attach(io: File.open('app/assets/images/home13.jpg'), filename: 'home13.jpg')
+  home13.photos.attach(io: File.open('app/assets/images/home13_2.jpg'), filename: 'home13_2.jpg')
+  home13.photos.attach(io: File.open('app/assets/images/home13_3.jpg'), filename: 'home13_3.jpg')
+  home13.photos.attach(io: File.open('app/assets/images/home13_4.jpg'), filename: 'home13_4.jpg')
+  home13.photos.attach(io: File.open('app/assets/images/home13_5.jpg'), filename: 'home13_5.jpg')
+
+  home14.photos.attach(io: File.open('app/assets/images/home14.jpg'), filename: 'home14.jpg')
+  home14.photos.attach(io: File.open('app/assets/images/home14_2.jpg'), filename: 'home14_2.jpg')
+  home14.photos.attach(io: File.open('app/assets/images/home14_3.jpg'), filename: 'home14_3.jpg')
+  home14.photos.attach(io: File.open('app/assets/images/home14_4.jpg'), filename: 'home14_4.jpg')
+  home14.photos.attach(io: File.open('app/assets/images/home14_5.jpg'), filename: 'home14_5.jpg')
+
+  home15.photos.attach(io: File.open('app/assets/images/home15.jpg'), filename: 'home15.jpg')
+  home15.photos.attach(io: File.open('app/assets/images/home15_2.jpg'), filename: 'home15_2.jpg')
+  home15.photos.attach(io: File.open('app/assets/images/home15_3.jpg'), filename: 'home15_3.jpg')
+  home15.photos.attach(io: File.open('app/assets/images/home15_4.jpg'), filename: 'home15_4.jpg')
+  home15.photos.attach(io: File.open('app/assets/images/home15_5.jpg'), filename: 'home15_5.jpg')
+
 end 
 
