@@ -67,6 +67,10 @@ div.sticky {
   border-bottom: 2px solid rgb(72, 72, 72);
 }
 
+.white button:hover {
+  border-bottom: 2px solid white;
+}
+
 #logo {
   width: 75px;
   height: 50px;
