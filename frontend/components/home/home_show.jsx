@@ -17,7 +17,7 @@ class HomeShow extends React.Component {
     return (
       <div>
         <div className="show-photos-container">
-          <img src={this.props.home.photoUrl} alt="home"/>
+          <img src={this.props.home.photoUrls[0]} alt="home"/>
 
         </div>
         <div className="show-content-container">

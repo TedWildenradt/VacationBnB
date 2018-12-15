@@ -1,5 +1,8 @@
-.show-photos-container img {
+.show-photos-container ul {
   max-height: 468px;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 50% 50%;
 }
 
 .show-content-information {

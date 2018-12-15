@@ -7,7 +7,7 @@ const HomeIndexItem = ({home}) => (
       <Link to={`homes/${home.id}`}>
       <div className="photo-thumbnail">
         {/* <h1>Photo of Home</h1> */}
-        <img src={home.photoUrl} alt="home"/>
+        <img src={home.photoUrls[0]} alt="home"/>
       </div>
       <div className="home-thumbnail-points">
         <div className="home-thumbnail-type-beds">

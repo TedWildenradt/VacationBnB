@@ -4,7 +4,7 @@ class Api::HomesController < ApplicationController
   end
 
   def show
-    @home = Home.find(params[:id])
+    @home = Home.with_attached_photos.find(params[:id])
   end
 
   def create
@@ -28,7 +28,8 @@ class Api::HomesController < ApplicationController
       :home_type,
       :bed_count,
       :bathrooms,
-      :bedrooms
+      :bedrooms,
+      photos: []
       )
   end
 end
