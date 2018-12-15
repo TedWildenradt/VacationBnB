@@ -8,10 +8,11 @@ const componentDidUpdate = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
-    // document.getElementsByClassName("sticky")[0].style.backgroundColor = "none"
+    document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
   } else {
     document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid lightgrey"
+    document.getElementsByClassName("sticky")[0].style.backgroundColor = "white"
   }
   
 };
@@ -19,6 +20,7 @@ const componentDidMount = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
+    document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
   } 
   
 };
