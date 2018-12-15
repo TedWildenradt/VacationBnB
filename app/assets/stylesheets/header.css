@@ -4,6 +4,7 @@ div.sticky {
   top: 0px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
+  z-index: 5;
 }
 
 .background-white {

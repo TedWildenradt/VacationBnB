@@ -11,6 +11,18 @@
 .show-photos-container ul li img {
   object-fit: cover;
   height: 100%;
+  opacity: .8;
+}
+
+.show-photos-container ul li {
+  overflow: hidden;
+}
+.show-photos-container ul li img:hover {
+  transition: transform .8s; 
+  transform: scale(1.05);
+  overflow: hidden;
+  object-fit: cover;
+  opacity: 1;
 }
 
 .photo-1 {

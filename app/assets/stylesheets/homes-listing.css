@@ -6,11 +6,11 @@ div.no-background{
   font-weight: bold;
   font-size: 24px;
 }
-
+ 
 .home-index-items-container {
   display: flex;
   justify-content: space-around;
-  width: 1200px;
+  width: 1500px;
 }
 
 .home-index-items-container ul {
