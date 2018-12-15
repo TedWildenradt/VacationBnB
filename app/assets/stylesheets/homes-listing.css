@@ -2,17 +2,21 @@ div.no-background{
   background-image: none !important;
 }
 
-.home-index-items-container > h3{
+.homes-listing-container-header > h3{
   font-weight: bold;
   font-size: 24px;
   margin: 10px 0;
 }
+.homes-listing-container-header {
+  margin-left: 75px;
+}
  
 .home-index-items-container {
-  /* display: flex; */
+  display: flex;
   /* justify-content: space-around; */
-  width: 1500px;
+  max-width: 1500px;
   margin: auto;
+  margin-left: 75px;
 }
 
 .home-index-items-container ul {
@@ -33,7 +37,8 @@ div.no-background{
 .photo-thumbnail{
   width: 328px;
   height: 219px;
-
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .home-thumbnail-points {
