@@ -1,6 +1,12 @@
 /* Photos section */
+
+.show-photos-container {
+  max-height: 600px;
+  overflow: hidden;
+}
 .show-photos-container ul {
-  max-height: 550px;
+  /* max-height: 700px; */
+  max-height: 100%;
   display: grid;
   grid-template-columns: 50% 25% 25%;
   grid-template-rows: 50% 50%;
@@ -20,6 +26,8 @@
 }
 
 .show-photos-container ul li {
+  object-fit: cover;
+  max-height: 280px;
   overflow: hidden;
 }
 .show-photos-container ul li img:hover {
@@ -33,8 +41,10 @@
 
 .photo-1 {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 2;
-  
+  grid-row: 1 / span 2;  
+}
+#photo-1 {
+  max-height: 560px;
 }
 
 .photo-2 {

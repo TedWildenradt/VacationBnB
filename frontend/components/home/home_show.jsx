@@ -11,6 +11,9 @@ class HomeShow extends React.Component {
   componentDidMount() {
     this.props.fetchHome(this.props.match.params.id)
   }
+  componentDidUpdate() {
+    window.scrollTo(0,0);
+  }
 
   render () {
     // debugger
@@ -20,7 +23,7 @@ class HomeShow extends React.Component {
         <div className="show-photos-container">
           {/* <img src={this.props.home.photoUrls[0]} alt="home"/> */}
           <ul className="photo-grid">
-            <li className="photo-1"><img src={this.props.home.photoUrls[0]} alt="home"/></li>
+            <li className="photo-1" id="photo-1"><img src={this.props.home.photoUrls[0]} alt="home"/></li>
             <li className="photo-2"><img src={this.props.home.photoUrls[1]} alt="home"/></li>
             <li className="photo-3"><img src={this.props.home.photoUrls[2]} alt="home"/></li>
             <li className="photo-4"><img src={this.props.home.photoUrls[3]} alt="home"/></li>
