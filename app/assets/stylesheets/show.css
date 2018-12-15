@@ -5,6 +5,8 @@
 .show-content-information {
   max-width: 670px;
   margin: auto;
+  color: rgb(72, 72, 72);
+
 }
 
 .show-home-type {
@@ -15,14 +17,21 @@
 .show-home-title {
   margin: 15px 0;
 }
+.show-home-title {
+  font-size: 24px;
+  font-weight: 700;
+}
 
 .show-home-city {
-  margin: 10px 0;
+  margin: 20px 0;
+}
+.show-home-city p {
+
+  margin-bottom: 15px;
 }
 
 .show-home-beds-baths ul{
   display: flex;
-  margin: 10px 0;
 }
 .show-home-beds-baths ul li{
   padding-right: 15px;
@@ -31,7 +40,8 @@
 
 .show-home-description {
   min-height: 225px;
-  border-bottom: lightgrey;
+  /* border-bottom: lightgrey; */
+  line-height: 30px;
 }
 
 .show-home-amenities h4 {

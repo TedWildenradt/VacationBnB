@@ -1,9 +1,8 @@
-// import Logo from '../../../app/assets/images/';
+
 import React from 'react';
 import {Link} from 'react-router-dom'
 import Lifecycle from 'react-pure-lifecycle';
-// import LoginFormContainer from '../session_form/login_form_container'
-// import SignupFormContainer from '../session_form/signup_form_container'
+
 
 const componentDidUpdate = ({location}) => {
   if(location.pathname === '/'){
@@ -30,11 +29,11 @@ const methods = {
 };
 
 const Greeting = ({currentUser, logout, openModal, location}) => {
-  // console.log(location)
+
 
   if(location.pathname === '/'){
     document.body.style.backgroundImage = "url(https://s3-us-west-1.amazonaws.com/vacationbnb-dev/airbnb_backsplash.jpg)";
-    // document.getElementsByClassName("greeting")[0].style.color = "grey"
+
   } else {
     document.body.style.backgroundImage = "none";
   }
@@ -64,8 +63,7 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       </ul>
     </div>
   )
-    // debugger
-  // return currentUser ? greetingHeading() : sessionbuttons();
+
 
   const headingOptions = currentUser ? greetingHeading() : sessionbuttons();
 
@@ -78,5 +76,5 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
 }
 
 
-// export default Greeting;
+
 export default Lifecycle(methods)(Greeting)

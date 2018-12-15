@@ -26,7 +26,7 @@ class HomeShow extends React.Component {
               <h3>{this.props.home.home_type}</h3>
             </div>
             <div className="show-home-title">
-              <p>{this.props.home.title}</p>
+              <h1>{this.props.home.title}</h1>
             </div>
             <div className="show-home-city">
               <p>{this.props.home.city}</p>
@@ -45,6 +45,7 @@ class HomeShow extends React.Component {
               {/* <hr/> */}
             </div>
             <div className="show-home-amenities">
+              <hr/>
               <h4>Amenities</h4>
                 <ul>
                   <li><i className="fas fa-wifi"></i>Wifi</li>
