@@ -7,17 +7,18 @@ import Lifecycle from 'react-pure-lifecycle';
 const componentDidUpdate = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
-    // document.getElementsByClassName("greeting-links")[0].style.borderBottom = "none"
+    document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
+    // document.getElementsByClassName("sticky")[0].style.backgroundColor = "none"
   } else {
     document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
-    // document.getElementsByClassName("greeting-links")[0].style.borderBottom = "1px solid lightgrey"
+    document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid lightgrey"
   }
   
 };
 const componentDidMount = ({location}) => {
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
-    // document.getElementsByClassName("greeting-links")[0].style.borderBottom = "none"
+    document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
   } 
   
 };
