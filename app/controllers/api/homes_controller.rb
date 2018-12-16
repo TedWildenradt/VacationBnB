@@ -1,6 +1,6 @@
 class Api::HomesController < ApplicationController
   def index
-    @homes = Home.in_bounds(params[:bounds])
+    @homes = params[:bounds] ? Home.in_bounds(params[:bounds]) : Home.all
     render :index
   end
 
