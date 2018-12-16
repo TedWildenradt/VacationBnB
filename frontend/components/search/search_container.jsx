@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './search';
 import {connect} from 'react-redux';
 import {fetchHomes} from '../../actions/home_actions'
-
+import {updateBounds} from '../../actions/filters_action';
 
 const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
@@ -14,7 +14,8 @@ const mapStateToProps = (state) => {
 const mapdispatchToProps = dispatch => {
 
   return ({
-    fetchHomes: () => dispatch(fetchHomes())
+    fetchHomes: () => dispatch(fetchHomes()),
+    updateBounds: (bounds) => dispatch(updateBounds(bounds))
   }) 
 }
 

@@ -11,7 +11,7 @@ class Search extends React.Component{
 
   render() {
 
-    const {homes, fetchHomes} = this.props;
+    const {homes, fetchHomes, updateBounds} = this.props;
     
     return(
       <div className="homes-map-container">
@@ -19,7 +19,7 @@ class Search extends React.Component{
           <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
         </div>
         <div className="homes-map-map">
-          <HomeMap homes={homes}/>
+          <HomeMap homes={homes} updateBounds={updateBounds}/>
         </div>
       </div>
     )
