@@ -79,13 +79,30 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
     </div>
   )
 
+  const bigSearchBar = () => (
+    <div className="big-search-container">
+      <div>
+        <h1>Book Unique Homes and Experiences</h1>
+      </div>
+      <div className="big-search-bar">
+        
+      </div>
+    </div>
+  )
+
+  const centerSearch = location.pathname === '/' ? bigSearchBar() : <div></div>;
+
 
   const headingOptions = currentUser ? greetingHeading() : sessionbuttons();
 
   return(
-    <div className="sticky">
-      
-      {headingOptions}
+    <div>
+      <div className="sticky">    
+        {headingOptions}
+      </div>
+      <div>
+        {centerSearch}
+      </div>
     </div>
   )
 }
