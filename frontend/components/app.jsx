@@ -6,6 +6,7 @@ import {AuthRoute} from '../util/route_util'
 import Modal from './modal/modal';
 import HomeIndexContainer from './home/home_index_container';
 import HomeShowContainer from './home/home_show_container';
+import SearchContainer from './search/search_container';
 
 
 const App = () => (
@@ -15,7 +16,7 @@ const App = () => (
     <Switch> 
       <Route exact path="/" />
       <Route exact path="/homes/:id" component={HomeShowContainer}/>
-      <Route exact path="/homes" component={HomeIndexContainer}/>
+      <Route exact path="/homes" component={SearchContainer}/>
     </Switch>
   </div>
 );

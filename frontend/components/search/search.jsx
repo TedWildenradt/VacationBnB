@@ -13,11 +13,11 @@ class Search extends React.Component{
 
     const {homes, fetchHomes} = this.props;
     return(
-      <div class="homes-map-container">
-        <div class="homes-map-index">
+      <div className="homes-map-container">
+        <div className="homes-map-index">
           <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
         </div>
-        <div class="homes-map-map">
+        <div className="homes-map-map">
           <HomeMap />
         </div>
       </div>
