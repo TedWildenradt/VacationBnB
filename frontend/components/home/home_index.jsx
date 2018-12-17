@@ -3,9 +3,9 @@ import HomeIndexItem from './home_index_item.jsx';
 
 
 class HomeIndex extends React.Component{
-  componentDidMount(){
-    this.props.fetchHomes();
-  }
+  // componentDidMount(){
+  //   this.props.fetchHomes();
+  // }
 
   
   render() {

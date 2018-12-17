@@ -12,8 +12,8 @@ export default class MarkerManager {
     homes.filter(home => !this.markers[home.id])
     .forEach(newHome => this.createMarkerFromHome(newHome, this.handleClick))
 
-    // Object.keys(this.markers).filter(homeId => !homesObj[homeId])
-    // .forEach(homeId => this.removeMarker(this.markers[homeId]))
+    Object.keys(this.markers).filter(homeId => !homesObj[homeId])
+    .forEach(homeId => this.removeMarker(this.markers[homeId]))
   }
 
   createMarkerFromHome(home) {
@@ -24,8 +24,11 @@ export default class MarkerManager {
       map: this.map,
       homeId: home.id
     })
-
-    marker.addListener('click', () => this.handleClick(home));
-    this.markers[marker.homeId] = marker;
   }
+
+  removeMarker(marker) {
+    this.markers[marker.homeId].setMap(null);
+    delete this.markers[marker.homeId]
+  }
+
 }
