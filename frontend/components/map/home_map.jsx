@@ -4,7 +4,7 @@ import MarkerManager from '../../util/marker_manager';
 
 const mapOptions = {
   center: { lat: 37.7758, lng: -122.435 }, // this is SF
-  zoom: 13
+  zoom: 12
 };
 class HomeMap extends React.Component{
   constructor(props) {
@@ -32,7 +32,7 @@ class HomeMap extends React.Component{
         northEast: {lat: north, lng: east},
         southWest: {lat: south, lng: west}
       }
-      this.props.updateBounds(bounds)
+      this.props.updateFilters('bounds', bounds);
     })
   }
 

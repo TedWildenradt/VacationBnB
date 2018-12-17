@@ -1,0 +1,19 @@
+.homes-map-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 100%;
+  height: 100%;
+}
+.homes-map-index {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  max-width: 1200px;
+  /* min-height: 800px; */
+}
+
+.homes-map-map {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  max-width: 700px;
+  height: 100%;
+}
