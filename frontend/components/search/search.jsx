@@ -12,18 +12,20 @@ class Search extends React.Component{
 
   render() {
 
-    const {homes, fetchHomes, updateFilters, price, num_guests} = this.props;
+    const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests} = this.props;
     
     return(
-      <div className="homes-map-container">
-        <div className="search-filters">
-          {/* <FilterForm updateFilters={updateFilters} price={price} num_guests={num_guests}/> */}
-        </div>
-        <div className="homes-map-index">
-          <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
-        </div>
-        <div className="homes-map-map">
-          <HomeMap homes={homes} updateFilters={updateFilters}/>
+      <div>
+        <div className="homes-map-container">
+          <div className="search-filters">
+            <FilterForm updateFilters={updateFilters} minPrice={minPrice} maxPrice={maxPrice} num_guests={num_guests}/>
+          </div>
+          <div className="homes-map-index">
+            <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
+          </div>
+          <div className="homes-map-map">
+            <HomeMap homes={homes} updateFilters={updateFilters}/>
+          </div>
         </div>
       </div>
     )

@@ -1,0 +1,12 @@
+.search-filters {
+  /* height: 75px; */
+}
+
+/* .price-menu{
+  height: 300px;
+  z-index: 10;
+} */
+
+.search-filters input {
+  border: 1px solid black;
+}

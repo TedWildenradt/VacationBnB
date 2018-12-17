@@ -1,20 +1,29 @@
 .homes-map-container {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 11% 59% 30%;
   grid-template-rows: 100%;
   height: 100%;
 
 }
-.homes-map-index {
+
+.search-filters {
   grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  padding: 10px;
+  /* box-shadow: inset 1px -3px 11px 0px; */
+}
+.homes-map-index {
+  grid-column: 2 / span 1;
   grid-row: 1 / span 1;
   max-width: 1200px;
   height: 900px;
   overflow: scroll;
+  border-left: 1px solid lightgrey;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 12px
 }
 
 .homes-map-map {
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 1 / span 1;
   max-width: 700px;
   height: 100%;

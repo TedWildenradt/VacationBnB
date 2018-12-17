@@ -8,7 +8,7 @@ div.no-background{
   margin: 10px 0;
 }
 .homes-listing-container-header {
-  margin-left: 75px;
+  margin-left: 15px;
 }
  
 .home-index-items-container {
@@ -16,7 +16,7 @@ div.no-background{
   /* justify-content: space-around; */
   max-width: 1500px;
   margin: auto;
-  margin-left: 75px;
+  margin-left: 15px;
 }
 
 .home-index-items-container ul {
@@ -26,7 +26,7 @@ div.no-background{
   flex-wrap: wrap;
 }
 .home-thumbnail{
-  width: 328px;
+  width: 300px;
   height: 309px;
   padding: 8px 6px 12px 6px;
   color: rgb(72, 72, 72);
@@ -35,7 +35,7 @@ div.no-background{
 }
 
 .photo-thumbnail{
-  width: 328px;
+  width: 300px;
   height: 219px;
   object-fit: cover;
   overflow: hidden;

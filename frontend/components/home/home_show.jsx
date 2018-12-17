@@ -17,6 +17,9 @@ class HomeShow extends React.Component {
 
   render () {
     // debugger
+    if (this.props.home.photoUrls === undefined) {
+      return null
+    }
     return (
       <div>
 

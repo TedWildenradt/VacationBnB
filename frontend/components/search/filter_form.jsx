@@ -5,10 +5,10 @@ class FilterForm extends React.Component{
 
   constructor(props){
     super(props)
-    this.state = {
-      price: props.price,
-      num_guests: props.num_guests
-    }
+    // this.state = {
+    //   price: props.price,
+    //   num_guests: props.num_guests
+    // }
   }
 
   render() {
