@@ -10,6 +10,11 @@ export const updateFilters = (filter, value) => (dispatch, getState) => {
   return fetchHomes(getState().ui.filters)(dispatch);
 }
 
+export const resetFilters = () => (dispatch, getState) => {
+  dispatch(clearFilters());
+  return fetchHomes(getState().ui.filters)(dispatch);
+}
+
 export const changeFilters = (filter, value) => ({
   type: UPDATE_FILTERS,
   filter,

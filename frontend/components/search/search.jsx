@@ -12,13 +12,15 @@ class Search extends React.Component{
 
   render() {
 
-    const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests} = this.props;
+    const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests, resetFilters} = this.props;
     
     return(
       <div>
         <div className="homes-map-container">
           <div className="search-filters">
-            <FilterForm updateFilters={updateFilters} minPrice={minPrice} maxPrice={maxPrice} num_guests={num_guests}/>
+            <FilterForm updateFilters={updateFilters} minPrice={minPrice} maxPrice={maxPrice} num_guests={num_guests}
+            resetFilters={resetFilters}
+            />
           </div>
           <div className="homes-map-index">
             <HomeIndex homes={homes} fetchHomes={fetchHomes}/>

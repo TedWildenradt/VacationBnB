@@ -13,7 +13,7 @@ const filtersReducer = (state=initialFilters, action) => {
   // debugger
   switch (action.type) {
     case UPDATE_FILTERS:
-    debugger
+    // debugger
       let newFilter = { [action.filter]: action.value}
       return merge({}, state, newFilter);
     case CLEAR_FILTERS: 

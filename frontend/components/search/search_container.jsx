@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './search';
 import {connect} from 'react-redux';
 import {fetchHomes} from '../../actions/home_actions'
-import {updateFilters} from '../../actions/filters_action';
+import {updateFilters, resetFilters} from '../../actions/filters_action';
 
 const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
@@ -17,7 +17,8 @@ const mapdispatchToProps = dispatch => {
 
   return ({
     fetchHomes: () => dispatch(fetchHomes()),
-    updateFilters: (filter, value) => dispatch(updateFilters(filter, value))
+    updateFilters: (filter, value) => dispatch(updateFilters(filter, value)),
+    resetFilters: () => dispatch(resetFilters())
   }) 
 }
 

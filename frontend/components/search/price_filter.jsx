@@ -1,6 +1,6 @@
 import React from 'react';
 // import Slider from 'react-rangeslider';
-import { updateFilters } from '../../actions/filters_action';
+// import { updateFilters } from '../../actions/filters_action';
 import {Range} from 'rc-slider';
 // import 'rc-slider/assets/index.css'
 // import '../../../../app/assets/stylesheets/components/rc-slider.css';
@@ -13,13 +13,15 @@ class PriceFilter extends React.Component{
     //   // showMenu: false,
     //   price: props.price
     // }
+    // debugger
     this.state = {
       minPrice: this.props.minPrice,
       maxPrice: this.props.maxPrice
     }
-    debugger
+    // debugger
     this.updatePrice = this.updatePrice.bind(this)
     this.handleApply = this.handleApply.bind(this)
+    // this.props.updateFilters = this.props.updateFilters.bind(this)
     
     // this.showMenu = this.showMenu.bind(this)
     // this.closeMenu = this.closeMenu.bind(this)
@@ -29,27 +31,43 @@ class PriceFilter extends React.Component{
       minPrice: e[0],
       maxPrice: e[1]
     })
+    // this.props.updateFilters('price', [this.state.minPrice,this.state.maxPrice])
   }
 
   handleApply(price) {
-    debugger
-    updateFilters('price', price)
+    // debugger
+    this.props.updateFilters('price', price)
   }
 
   render(){
     const{minPrice, maxPrice} = this.state;
-
+    // const{updateFilters} = this.props
+    // debugger
+    // console.log(this.props)
     return(
-      <div>
-        <p>{minPrice}</p>
+      <div className="price-filter-slider">  
+        <div>
+          <h2>Price Filter</h2>
+        </div >
+        <div className="range-slider">
         <Range
         min={1}
         max={600}
         value={[minPrice, maxPrice]}
         defaultValue={[minPrice, maxPrice]}
         onChange={this.updatePrice}
+        // onChange={() => this.handleApply([minPrice, maxPrice])}
+        onAfterChange={() => this.handleApply([minPrice, maxPrice])}
         />
-        <p>{maxPrice}</p>
+        </div>
+        <div className="price-filter-bounds">
+          <div>
+            <p>${minPrice}</p>
+          </div>
+          <div>
+            <p>${maxPrice}</p>            
+          </div>
+        </div>
         <button onClick={() => this.handleApply([minPrice, maxPrice])}>Apply Filter</button>
       </div>
 
@@ -85,7 +103,7 @@ class PriceFilter extends React.Component{
 
   // handleSubmit(e){
   //   e.preventDefault();
-  //   this.props.updateFilter(this.state.price)
+  //   this.props.updateFilters(this.state.price)
   // }
 
 

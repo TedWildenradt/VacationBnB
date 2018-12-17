@@ -1,7 +1,11 @@
 class Api::HomesController < ApplicationController
   def index
     # debugger
-    @homes = params[:bounds] ? Home.with_attached_photos.in_bounds(params[:bounds]) : Home.with_attached_photos.all
+    homes = params[:bounds] ? Home.with_attached_photos.in_bounds(params[:bounds]) : Home.with_attached_photos.all
+    if params[:price]
+      homes = homes.where(price: price_range)
+    end 
+    @homes = homes 
     render :index
   end
 
@@ -19,6 +23,10 @@ class Api::HomesController < ApplicationController
   end
 
   private
+  def price_range
+    (params[:price][0]..params[:price][1])
+  end
+
   def home_params
     params.require(:home).permit(
       :num_guests,

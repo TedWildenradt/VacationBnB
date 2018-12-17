@@ -10,3 +10,12 @@
 .search-filters input {
   border: 1px solid black;
 }
+
+.price-filter-bounds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-slider {
+  margin: 8px;
+}
