@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     home: state.entities.homes[ownProps.match.params.id] || {}
   })
-}
+} 
 
 const mapDispatchToProps = dispatch => {
 

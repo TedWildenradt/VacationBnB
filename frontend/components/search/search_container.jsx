@@ -7,7 +7,9 @@ import {updateFilters} from '../../actions/filters_action';
 const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
   return ({
-    homes: homes
+    homes: homes,
+    price: state.ui.filters.price,
+    num_guests: state.ui.filters.num_guests
   })
 }
 
