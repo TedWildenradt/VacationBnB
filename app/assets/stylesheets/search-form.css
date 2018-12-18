@@ -1,0 +1,30 @@
+#search-form {
+  background: transparent;
+  /* margin-top: 300px; */
+}
+
+#search-form input{
+  background: white;
+  border: 1px solid white;
+}
+
+#search-form h1 {
+  font-size: 41px;
+  font-weight: 900;
+  color: white;
+}
+
+.big-search-bar form {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.big-search-container {
+  position: relative;
+  top: 142px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}

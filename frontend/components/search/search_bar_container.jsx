@@ -7,7 +7,8 @@ import {updateFilters, resetFilters} from '../../actions/filters_action';
 const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
   return ({
-    homes: homes
+    homes: homes,
+    query: ''
   })
 }
 

@@ -5,7 +5,7 @@ export default class MarkerManager {
   }
 
   updateMarkers(homes) {
-    console.log('time to update');
+    // console.log('time to update');
     const homesObj = {};
     homes.forEach(home => homesObj[home.id] = home);
 
@@ -22,8 +22,11 @@ export default class MarkerManager {
     const marker = new google.maps.Marker({
       position: position,
       map: this.map,
-      homeId: home.id
+      homeId: home.id,
+      label: `$${home.price}`
+      // icon
     })
+
   }
 
   removeMarker(marker) {

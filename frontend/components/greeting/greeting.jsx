@@ -2,6 +2,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import Lifecycle from 'react-pure-lifecycle';
+import SearchBarContainer from '../search/search_bar_container';
 
 
 const componentDidUpdate = ({location}) => {
@@ -81,11 +82,8 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
 
   const bigSearchBar = () => (
     <div className="big-search-container">
-      <div>
-        <h1>Book Unique Homes and Experiences</h1>
-      </div>
       <div className="big-search-bar">
-        
+        <SearchBarContainer />
       </div>
     </div>
   )
