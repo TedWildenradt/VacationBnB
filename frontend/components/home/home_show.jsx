@@ -81,7 +81,7 @@ class HomeShow extends React.Component {
 
           </div>
           <div className="show-booking-info">
-
+            
           </div>
         </div>
       </div>
