@@ -5,6 +5,7 @@ class SearchBar extends React.Component {
     super(props)
     state = {
       query: '',
+      searchResults: []
     }
   }
  

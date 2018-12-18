@@ -7,9 +7,7 @@ import {updateFilters, resetFilters} from '../../actions/filters_action';
 const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
   return ({
-    homes: homes,
-    price: state.ui.filters.price,
-    num_guests: state.ui.filters.num_guests
+    homes: homes
   })
 }
 
@@ -17,8 +15,7 @@ const mapdispatchToProps = dispatch => {
 
   return ({
     fetchHomes: () => dispatch(fetchHomes()),
-    updateFilters: (filter, value) => dispatch(updateFilters(filter, value)),
-    resetFilters: () => dispatch(resetFilters())
+
   }) 
 }
 
