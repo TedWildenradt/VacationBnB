@@ -4,10 +4,9 @@ import {createBooking} from '../../actions/booking_actions';
 
 
 const mapStateToProps = ({session, entities: {users}, entities: {homes}}, ownProps) => {
-  
+
   return ({
     currentUser: users[session.id],
-    home: homes[ownProps.match.params.id] || {}
   })
 }
 

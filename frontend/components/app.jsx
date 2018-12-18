@@ -1,3 +1,6 @@
+import 'react-dates/initialize';
+// import 'react-dates/lib/css/_datepicker.css';
+// import "node_modules/react-dates/lib/css/_datepicker";
 import React from 'react';
 import GreetingContainer from '../components/greeting/greeting_container';
 

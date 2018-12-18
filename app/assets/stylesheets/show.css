@@ -149,3 +149,7 @@
 .show-reviews-container {
   min-height: 500px;
 }
+
+.show-booking-info {
+  box-sizing: border-box;
+}

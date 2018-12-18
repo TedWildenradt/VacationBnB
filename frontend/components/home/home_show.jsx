@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BookingFormContainer from '../booking/booking_form_container';
+// import 'react-dates/initialize';
 
 class HomeShow extends React.Component {
   constructor(props){
@@ -81,7 +83,7 @@ class HomeShow extends React.Component {
 
           </div>
           <div className="show-booking-info">
-            
+            <BookingFormContainer home={this.props.home}/>
           </div>
         </div>
       </div>
