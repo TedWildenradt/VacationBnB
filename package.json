@@ -17,9 +17,11 @@
     "react-rangeslider": "^2.2.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
+    "react-with-direction": "^1.3.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   },
@@ -41,5 +43,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^2.0.1"
+  }
 }

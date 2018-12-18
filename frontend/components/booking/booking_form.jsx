@@ -43,10 +43,10 @@ class BookingForm extends React.Component{
             <h5>Guests</h5>
           </div>
           <div className="booking-form-guest-input">
-            <input type="text"/>
+            <input className="booking-form-input" type="text"/>
           </div>
           <div className="booking-form-book">
-            <input type="submit" value="Book"/>
+            <input className="booking-form-input" type="submit" value="Book"/>
           </div>
           <div>
             <h6>You won't be charged yet</h6>
