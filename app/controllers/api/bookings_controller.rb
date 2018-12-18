@@ -11,8 +11,8 @@ class Api::BookingsController < ApplicationController
 
   end
 
-  def index
-    @bookings = Booking.all
+  def index    
+    @bookings = Booking.all.where(user_id: current_user.id)
   end
 
   def update
