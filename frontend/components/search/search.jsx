@@ -12,8 +12,8 @@ class Search extends React.Component{
 
   render() {
 
-    const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests, resetFilters} = this.props;
-    
+    const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests, resetFilters, location} = this.props;
+    // console.log(this.props)
     return(
       <div>
         <div className="homes-map-container">
@@ -26,7 +26,7 @@ class Search extends React.Component{
             <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
           </div>
           <div className="homes-map-map">
-            <HomeMap homes={homes} updateFilters={updateFilters}/>
+            <HomeMap homes={homes} updateFilters={updateFilters} location={location}/>
           </div>
         </div>
       </div>

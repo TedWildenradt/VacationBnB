@@ -6,6 +6,7 @@ import SearchBarContainer from '../search/search_bar_container';
 
 
 const componentDidUpdate = ({location}) => {
+  
   if(location.pathname === '/'){
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
@@ -46,7 +47,7 @@ const methods = {
 
 const Greeting = ({currentUser, logout, openModal, location}) => {
 
-
+  // console.log(location)
   if(location.pathname === '/'){
     document.body.style.backgroundImage = "url(https://s3-us-west-1.amazonaws.com/vacationbnb-dev/airbnb_backsplash.jpg)";
 

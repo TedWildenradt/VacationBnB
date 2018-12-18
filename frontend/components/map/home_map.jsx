@@ -12,18 +12,20 @@ class HomeMap extends React.Component{
   constructor(props) {
     super(props)
   }
+  
 
   componentDidMount() {
-    // set the map to show SF
+
+    
 
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    // this.map = new google.maps.Map(mapDOMNode, mapOptions);
+
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.homes);
     // debugger
     this.regularListener();
-    //marker manager
+
   }
 
   regularListener() {
@@ -43,7 +45,7 @@ class HomeMap extends React.Component{
   }
 
   render() {
-
+    console.log(this.props)
     return(
       <div id="map-container" ref={ map => this.mapNode = map }>
 
