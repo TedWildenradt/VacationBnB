@@ -6,6 +6,8 @@ class Home < ApplicationRecord
   belongs_to :owner,
     foreign_key: :owner_id,
     class_name: :User
+  
+  has_many :bookings
 
   has_many_attached :photos
 

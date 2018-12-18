@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :bookings
+  
   has_many :homes,
     foreign_key: :owner_id,
     class_name: :Home
