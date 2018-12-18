@@ -19,3 +19,8 @@
 .range-slider {
   margin: 8px;
 }
+
+#clear-all-filters-btn {
+  display: flex;
+  justify-content: center;
+}

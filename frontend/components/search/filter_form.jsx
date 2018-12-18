@@ -22,10 +22,12 @@ class FilterForm extends React.Component{
         <div className="price-filter">
           <PriceFilterContainer />
         </div>
-        <div className="guests-filter-button">
+        {/* <div className="guests-filter-button">
           <button id="guests">Guests</button>
+        </div> */}
+        <div id="clear-all-filters-btn">
+          <button onClick={this.clearFilters}>Clear All Filters</button>
         </div>
-        <button onClick={this.clearFilters}>Clear Filters</button>
       </div>
     )
   }

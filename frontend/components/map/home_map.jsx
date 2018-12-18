@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import MarkerManager from '../../util/marker_manager';
 
 const mapOptions = {
-  center: { lat: 37.7758, lng: -122.435 }, // this is SF
-  zoom: 12
+  // center: { lat: 37.7758, lng: -122.435 }, // this is SF
+  center: { lat: 39.012435, lng: -101.434000 }, // this is USA
+  // zoom: 12 //This is SF
+  zoom: 3
 };
 class HomeMap extends React.Component{
   constructor(props) {

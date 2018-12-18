@@ -68,7 +68,7 @@ class PriceFilter extends React.Component{
             <p>${maxPrice}</p>            
           </div>
         </div>
-        <button onClick={() => this.handleApply([minPrice, maxPrice])}>Apply Filter</button>
+        {/* <button onClick={() => this.handleApply([minPrice, maxPrice])}>Apply Filter</button> */}
       </div>
 
     )
