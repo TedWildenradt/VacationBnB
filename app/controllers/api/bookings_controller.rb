@@ -3,8 +3,9 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     # @booking.home_id = params[:id]
     @booking.user_id = current_user.id
+    @booking.home_id = params[:home_id]
     if @booking.save
-      render '/api/bookings'
+      render '/api/bookings/show'
     else 
       render json: @booking.errors.full_messages, status: 418
     end
@@ -12,7 +13,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def index    
-    @bookings = Booking.all.where(user_id: current_user.id)
+    @bookings = Booking.all #.where(user_id: current_user.id)
   end
 
   def update
@@ -25,8 +26,13 @@ class Api::BookingsController < ApplicationController
     @booking.find(params[:id])
   end
 
+  def show 
+    # debugger
+    @booking = Booking.find(params[:id])
+  end
+
   private
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :home_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

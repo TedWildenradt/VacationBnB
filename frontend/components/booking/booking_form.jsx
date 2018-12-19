@@ -10,6 +10,12 @@ class BookingForm extends React.Component{
       num_guests: null,
       focusedInput: null
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.createBooking({start_date: this.state.start_date, end_date: this.state.end_date})
   }
 
 
@@ -17,7 +23,7 @@ class BookingForm extends React.Component{
     const{home} = this.props
     return(
       <div className="booking-form-container">
-        <form className="booking-form">
+        <form className="booking-form" onSubmit={this.handleSubmit}>
           
           <h2>${home.price}</h2>
           
@@ -46,7 +52,7 @@ class BookingForm extends React.Component{
             <input className="booking-form-input" type="text"/>
           </div>
           <div className="booking-form-book">
-            <input className="booking-form-input" type="submit" value="Book"/>
+            <input id="booking-button"className="booking-form-input" type="submit" value="Book"/>
           </div>
           <div>
             <h6>You won't be charged yet</h6>

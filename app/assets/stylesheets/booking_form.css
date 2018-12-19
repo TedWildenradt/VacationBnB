@@ -18,3 +18,12 @@
   margin-top: 0;
   border: 1px solid #e4e4e4;
 }
+
+#booking-button {
+  height: 42px;
+}
+
+.DateInput_input {
+  text-align: center;
+  margin-top: 0;
+}
