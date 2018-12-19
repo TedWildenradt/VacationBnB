@@ -1,6 +1,7 @@
 import BookingForm from './booking_form';
 import {connect} from 'react-redux';
 import {createBooking} from '../../actions/booking_actions';
+import { openModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = ({session, entities: {users}, entities: {homes}}, ownProps) => {
@@ -14,7 +15,9 @@ const mapStateToProps = ({session, entities: {users}, entities: {homes}}, ownPro
 const mapdispatchToProps = dispatch => {
 
   return ({
-    createBooking: (booking) => dispatch(createBooking(booking))
+    createBooking: (booking) => dispatch(createBooking(booking)),
+
+    openModal: (formtype) => dispatch(openModal(formtype))
   }) 
 }
 

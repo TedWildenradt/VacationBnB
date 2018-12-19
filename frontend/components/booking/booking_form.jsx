@@ -18,11 +18,16 @@ class BookingForm extends React.Component{
     debugger
     e.preventDefault();
 
-    this.props.createBooking({
-      start_date: this.state.start_date._d, 
-      end_date: this.state.end_date._d,
-      home_id: this.state.home_id
-    })
+    if (!this.props.currentUser){
+      this.props.openModal('Login')
+    } else {
+      this.props.createBooking({
+        start_date: this.state.start_date._d, 
+        end_date: this.state.end_date._d,
+        home_id: this.state.home_id
+      })
+    }
+
   }
 
 
