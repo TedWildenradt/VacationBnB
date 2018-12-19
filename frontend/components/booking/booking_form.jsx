@@ -25,7 +25,7 @@ class BookingForm extends React.Component{
         start_date: this.state.start_date._d, 
         end_date: this.state.end_date._d,
         home_id: this.state.home_id
-      })
+      }).then(() => this.props.history.push(`/bookings`), (err) => console.log(err))
     }
 
   }

@@ -10,6 +10,7 @@ import Modal from './modal/modal';
 import HomeIndexContainer from './home/home_index_container';
 import HomeShowContainer from './home/home_show_container';
 import SearchContainer from './search/search_container';
+import BookingsIndexContainer from './booking/bookings_index_container'
 
 
 const App = () => (
@@ -17,10 +18,10 @@ const App = () => (
     <Modal />
     <GreetingContainer />
     <Switch> 
+      <AuthRoute exact path="/bookings" component={BookingsIndexContainer} />
       <Route exact path="/" />
       <Route exact path="/homes/:id" component={HomeShowContainer}/>
       <Route exact path="/homes" component={SearchContainer}/>
-      
     </Switch>
   </div>
 );
