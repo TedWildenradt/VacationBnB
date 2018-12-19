@@ -4,11 +4,34 @@
   top: 35px;
 }
 
+.date-range-picker {
+  box-sizing: border-box;
+}
+
 .booking-form-container form {
-  width: 355px;
-  height: 361px;
+  width: 325px;
+  height: 370px;
   padding: 0 24px;
   border: 1px solid #e4e4e4;
+}
+
+.booking-form-container form #start_date_id:focus {
+  border: none;
+  background-color: rgb(97, 241, 217);
+}
+.booking-form-container form #end_date_id:focus {
+  border: none;
+  background-color: rgb(97, 241, 217);
+}
+
+.booking-form-container form h5 {
+  font-size: 12px;
+  color: rgb(72, 72, 72);
+  font-weight: 450;
+}
+.booking-form-container form h2 {
+  font-size: 20px;
+  color: rgb(72, 72, 72);
 }
 
 .booking-form-input {
@@ -19,10 +42,56 @@
 }
 
 #booking-button {
-  height: 42px;
+  box-sizing: content-box;
+  height: 22px;
+  width: 278px;
+  padding: 10px 22px;
+  border: 2px solid rgb(255, 90, 95);
+  margin-top: 10px;
+}
+
+#booking-button:focus {
+  background-color: none;
+}
+
+#guests-button {
+  width: 308px;
+  height: 22px;
+  padding: 8px;
+}
+
+#guests-button:focus {
+  border: 1px solid rgba(81, 203, 238, 1);
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
 
 .DateInput_input {
   text-align: center;
-  margin-top: 0;
+  margin-top: 8px;
+}
+
+#per-night {
+  font-size: 12px;
+}
+.DateRangePickerInput__withBorder {
+  width: 324px;
+  height: 42px;
+}
+
+#start_date_id:hover {
+  /* border-bottom: 2px solid #008489; */
+  text-decoration: none;
+
+}
+
+#no-charge {
+  text-align: center;
+  color: rgb(72, 72, 72);
+  font-weight: 300;
+  font-size: 16px;
+  height: 20px;
+}
+
+#no-charge h6 {
+  margin-top: 10px;
 }

@@ -155,7 +155,7 @@
 }
 
 .show-booking-info {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   max-width: 500px;
   margin: 0 auto;
   margin-top: 30px;
