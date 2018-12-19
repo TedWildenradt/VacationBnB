@@ -8,14 +8,21 @@ class BookingForm extends React.Component{
       start_date: null,
       end_date: null,
       num_guests: null,
-      focusedInput: null
+      focusedInput: null,
+      home_id: this.props.home_id
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e){
+    debugger
     e.preventDefault();
-    this.props.createBooking({start_date: this.state.start_date, end_date: this.state.end_date})
+
+    this.props.createBooking({
+      start_date: this.state.start_date._d, 
+      end_date: this.state.end_date._d,
+      home_id: this.state.home_id
+    })
   }
 
 

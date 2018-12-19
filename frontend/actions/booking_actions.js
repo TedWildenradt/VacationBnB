@@ -14,10 +14,13 @@ export const fetchBooking = (id) => dispatch => (
   .then(booking => dispatch(receiveBooking(booking)))
 )
 
-export const createBooking = (booking) => dispatch => (
+export const createBooking = (booking) => dispatch => {
+  // debugger
+  return(
   BookingApiUtil.createBooking(booking)
   .then(bookings => dispatch(receiveBookings(bookings)))
-)
+  )
+}
 
 export const updateBooking = (booking) => dispatch => (
   BookingApiUtil.updateBooking(booking)

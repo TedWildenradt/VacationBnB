@@ -1,9 +1,10 @@
 class Api::BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
-    # @booking.home_id = params[:id]
+    # debugger
     @booking.user_id = current_user.id
-    @booking.home_id = params[:home_id]
+    # debugger
+
     if @booking.save
       render '/api/bookings/show'
     else 
@@ -33,6 +34,6 @@ class Api::BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :home_id)
   end
 end

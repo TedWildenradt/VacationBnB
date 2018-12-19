@@ -19,7 +19,7 @@ export const createBooking = (booking) => (
 
   $.ajax({
     method: "POST",
-    url: `api/bookings`,
+    url: `/api/homes/:home_id/bookings`,
     data: {booking}
   })
 )

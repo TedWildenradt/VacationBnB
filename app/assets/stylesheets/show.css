@@ -71,14 +71,18 @@
   
 }
 
+.show-content-container {
+  display: flex;
+}
+
 
 /* Content section */
 .show-content-information {
-  max-width: 670px;
+  max-width: 600px;
   margin: auto;
   color: rgb(72, 72, 72);
   margin-top: 20px;
-
+  margin-right: 40px;
 }
 
 .show-home-type {
@@ -152,4 +156,8 @@
 
 .show-booking-info {
   box-sizing: border-box;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-left: 0px;
 }

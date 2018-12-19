@@ -1,8 +1,7 @@
 .booking-form-container{
-  /* width: 326px;
-  height: 361px;
-  padding: 0 24px;
-  border: 1px solid rgb(72, 72, 72); */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 35px;
 }
 
 .booking-form-container form {
