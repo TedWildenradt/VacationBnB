@@ -26,7 +26,7 @@ class Search extends React.Component{
             <HomeIndex homes={homes} fetchHomes={fetchHomes}/>
           </div>
           <div className="homes-map-map">
-            <HomeMap homes={homes} updateFilters={updateFilters} location={location}/>
+            <HomeMap homes={homes} updateFilters={updateFilters} location={location} />
           </div>
         </div>
       </div>
