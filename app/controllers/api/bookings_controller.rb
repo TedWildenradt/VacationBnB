@@ -26,6 +26,7 @@ class Api::BookingsController < ApplicationController
   def destroy
     @booking = current_user.bookings.find(params[:id])
     @booking.destroy
+    render json: @booking.id
   end
 
   def show 

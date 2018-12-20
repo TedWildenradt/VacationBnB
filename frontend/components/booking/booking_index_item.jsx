@@ -9,7 +9,7 @@ class BookingIndexitem extends React.Component{
 
   deleteBooking(){
     this.props.deleteBooking(this.props.booking.id)
-    .then( window.location.reload(), (err) => console.log(err))
+    // .then( window.location.reload(), (err) => console.log(err))
   }
 
   render(){
@@ -46,7 +46,7 @@ class BookingIndexitem extends React.Component{
               <hr/>
             </div>
             <div className="delete-booking">
-              <button id="delete-booking-button" onClick={this.deleteBooking}>Delete</button>
+              <button id="delete-booking-button" onClick={this.deleteBooking}>Cancel Reservation</button>
             </div>
           </div>
         </div>

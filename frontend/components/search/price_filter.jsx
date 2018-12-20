@@ -23,6 +23,16 @@ class PriceFilter extends React.Component{
 
   }
 
+  componentDidUpdate(prevProps) {
+      if (this.props.maxPrice !== prevProps.maxPrice || this.props.minPrice !== prevProps.minPrice){
+        this.setState({
+          minPrice: this.props.minPrice,
+          maxPrice: this.props.maxPrice
+        })
+      }
+  }
+
+
   handleApply(price) {
 
     this.props.updateFilters('price', price)

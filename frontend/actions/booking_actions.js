@@ -29,7 +29,9 @@ export const updateBooking = (booking) => dispatch => (
 
 export const deleteBooking = (id) => dispatch => (
   BookingApiUtil.deleteBooking(id)
-  .then(booking => dispatch(removeBookings(booking.id)))
+  .then(id => {
+    debugger
+    dispatch(removeBookings(id))})
 )
 
 export const receiveBookings = (payload) => ({
