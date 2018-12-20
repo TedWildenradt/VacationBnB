@@ -14,7 +14,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def index    
-    @bookings = Booking.all #.where(user_id: current_user.id)
+    @bookings = Booking.all .where(user_id: current_user.id).includes(:home)
   end
 
   def update
@@ -24,7 +24,9 @@ class Api::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking.find(params[:id])
+    # debugger
+    @booking = current_user.bookings.find(params[:id])
+    @booking.destroy
   end
 
   def show 

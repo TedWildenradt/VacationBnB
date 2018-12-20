@@ -76,6 +76,7 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       </div>
       <ul className="welcome-message-logged-in">
         <li><button className="color-change"><Link to="/homes" id="explore" >Explore Available Homes</Link></button></li>
+        <li><button className="color-change"><Link to="/bookings" id="trips-button" >Trips</Link></button></li>
         <li><button className="color-change" id="logout-button" onClick={logout}>Logout</button></li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
+import {push} from 'react-router-dom'
 
 class BookingForm extends React.Component{
   constructor(props) {
@@ -15,17 +16,18 @@ class BookingForm extends React.Component{
   }
 
   handleSubmit(e){
-    debugger
+    // debugger
     e.preventDefault();
 
     if (!this.props.currentUser){
       this.props.openModal('Login')
     } else {
+      debugger
       this.props.createBooking({
         start_date: this.state.start_date._d, 
         end_date: this.state.end_date._d,
         home_id: this.state.home_id
-      }).then(() => this.props.history.push(`/bookings`), (err) => console.log(err))
+      }).then(() => this.props.history.push('/bookings'), (err) => console.log(err))
     }
 
   }
@@ -36,9 +38,9 @@ class BookingForm extends React.Component{
     return(
       <div className="booking-form-container">
         <form className="booking-form" onSubmit={this.handleSubmit}>
-          
-          <h2>${home.price} <span id="per-night">per night</span></h2>
-          
+          <div className="booking-form-price">
+            <h2>${home.price} <span id="per-night">per night</span></h2>
+          </div>
           <hr/>
           
           <div className="booking-form-dates">

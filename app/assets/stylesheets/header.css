@@ -34,18 +34,16 @@ div.sticky {
   display: flex;
 
 }
-/* 
-#explore {
-  padding: 10px;
-  text-decoration: none;
-  padding-left: 20px;
+
+/* #explore {
+  width: 150px;
 } */
 
 .welcome-message-logged-in {
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  width: 275px;
+  width: 340px;
 }
 
 #welcome-message {

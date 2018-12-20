@@ -41,6 +41,14 @@
   border: 1px solid #e4e4e4;
 }
 
+.booking-form-price {
+  margin-top: 15px;
+}
+
+.booking-form-price h2 {
+  font-weight: 600;
+  font-size: 22px;
+}
 #booking-button {
   box-sizing: content-box;
   height: 22px;

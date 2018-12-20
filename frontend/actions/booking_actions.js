@@ -18,7 +18,7 @@ export const createBooking = (booking) => dispatch => {
   // debugger
   return(
   BookingApiUtil.createBooking(booking)
-  .then(bookings => dispatch(receiveBookings(bookings)))
+  .then(booking => dispatch(receiveBooking(booking)))
   )
 }
 
@@ -28,13 +28,14 @@ export const updateBooking = (booking) => dispatch => (
 )
 
 export const deleteBooking = (id) => dispatch => (
-  BookingApiUtil.fetchBookings(id)
+  BookingApiUtil.deleteBooking(id)
   .then(booking => dispatch(removeBookings(booking.id)))
 )
 
-export const receiveBookings = (bookings) => ({
+export const receiveBookings = (payload) => ({
   type: RECEIVE_ALL_BOOKINGS,
-  bookings
+  bookings: payload.bookings,
+  homes: payload.homes
 })
 
 export const receiveBooking = (booking) => ({
