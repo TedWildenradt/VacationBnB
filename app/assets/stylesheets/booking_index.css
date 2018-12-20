@@ -7,35 +7,87 @@
   font-size: 36px;
   font-weight: 600;
   padding-top: 15px;
+  color: rgb(72, 72, 72)
 }
 
 .bookings-index-item-container {
+  display: flex;
   max-width: 1400px;
   margin: auto;
   margin-top: 40px;
+  justify-content: center;
 }
 
 .bookings-index-item-container ul {
   display: flex;
   justify-content: space-around;
   max-width: 100%;
+  flex-direction: column;
+  margin: auto;
+}
+
+.bookings-index-item-container ul li {
+  margin-top: 20px;
 }
 
 .booking-thumbnail	{
   display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 400px;
+  flex-direction: row-reverse;
+  width: 1000px;
+  height: 300px;
   align-items: center;
   border: 1px solid #e4e4e4;
 }
 
 .booking-thumbnail-photo {
-  width: 400px;
-  height: 267px;
+  object-fit: contain;
+  width: 454px;
+  height: 303px;
+}
 
+.booking-title h3 {
+  color: rgb(72, 72, 72);
+  font-size: 22px;
 }
 
 .booking-thumbnail-photo img {
   object-fit: contain;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.booking-content {
+  margin: auto;
+}
+
+.delete-booking {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-booking-button {
+  text-align: center;
+  background-color: rgb(255, 90, 95);
+  color: white;
+  height: 37px;
+  width: 200px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.check-in {
+  margin: 10px 0;  
+}
+
+.check-out {
+  margin: 10px 0;
+}
+
+.booking-price {
+  margin: 20px 0;
+}
+
+.line-break {
+  width: 490px;
 }

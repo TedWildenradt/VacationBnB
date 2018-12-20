@@ -29,7 +29,7 @@ class BookingsIndex extends React.Component{
     return(
       <div>
         <div className="Bookings-header">
-          <h2>Bookings</h2>
+          <h2>Your Trips</h2>
         </div>
         <div className="bookings-index-item-container">
           <ul>

@@ -31,16 +31,23 @@ class BookingIndexitem extends React.Component{
               <h3>{home.title}</h3>
             </div>
             <div className="booking-dates">
-              <h3>Check in: {booking.start_date.slice(0,10)}</h3>
-              <h3>Check out: {booking.end_date.slice(0,10)}</h3>
+              <div className="check-in">
+                <h3>Check in: {booking.start_date.slice(0,10)}</h3>
+              </div>
+              <div className="check-out">
+                <h3>Check out: {booking.end_date.slice(0,10)}</h3>
+              </div>
             </div>
             <div className="booking-price">
               <h3>${home.price} per night</h3>
+              
+            </div>
+            <div className="line-break">
+              <hr/>
             </div>
             <div className="delete-booking">
-              <button onClick={this.deleteBooking}>Delete</button>
+              <button id="delete-booking-button" onClick={this.deleteBooking}>Delete</button>
             </div>
-
           </div>
         </div>
       </li>
