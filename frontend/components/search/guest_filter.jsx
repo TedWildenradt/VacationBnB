@@ -20,8 +20,16 @@ class GuestFilter extends React.Component{
       minGuest: e[0],
       maxGuest: e[1]
     })
-
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.maxGuest !== prevProps.maxGuest || this.props.minGuest !== prevProps.minGuest){
+      this.setState({
+        minGuest: this.props.minGuest,
+        maxGuest: this.props.maxGuest
+      })
+    }
+}
 
   handleApply(num_guests) {
 

@@ -4,14 +4,21 @@ class SearchBar extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      address: ''
+      query: this.props.query
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
  
   handleInputChange () {
     return e => this.setState({
       query: e.target.value
     })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    this.props.updateFilters('query', this.state.query)
+    .then(() => this.props.history.push('/homes'), (err) => console.log(err))
   }
  
   render() {
@@ -21,7 +28,7 @@ class SearchBar extends React.Component {
       return cities[num];
     }
     return (
-      <form id="search-form">
+      <form id="search-form" onSubmit={this.handleSubmit}>
         {/* <i class="fas fa-search"></i> */}
         <label><h1>Book Unique Homes and Experiences</h1>
           <input

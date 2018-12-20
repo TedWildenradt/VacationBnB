@@ -8,6 +8,10 @@ class Api::HomesController < ApplicationController
     if params[:num_guests]
       homes = homes.where(num_guests: guests_range)
     end
+    if params[:query]
+      homes = homes.where("city ILIKE ?", "%#{params[:query]}%") 
+    end 
+
     @homes = homes 
     render :index
   end

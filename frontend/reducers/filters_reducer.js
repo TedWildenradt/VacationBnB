@@ -4,7 +4,8 @@ import merge from 'lodash/merge'
 const initialFilters = {
   bounds: {},
   price: [1,600],
-  num_guests: [1,12]
+  num_guests: [1,12],
+  query: ''
 }
 
 const filtersReducer = (state=initialFilters, action) => {
