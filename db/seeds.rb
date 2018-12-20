@@ -9,6 +9,7 @@
 ActiveRecord::Base.transaction do
   User.destroy_all
   Home.destroy_all
+  Booking.destroy_all
 
   user1 = User.create(email: 'demo@email.com', password: 'password', fname: 'Demo', lname: 'Login')
   user2 = User.create(email: 'ron@email.com', password: 'password', fname: 'Ron', lname: 'Burgandy')
@@ -134,5 +135,10 @@ ActiveRecord::Base.transaction do
   home15.photos.attach(io: File.open('app/assets/images/home15_4.jpg'), filename: 'home15_4.jpg')
   home15.photos.attach(io: File.open('app/assets/images/home15_5.jpg'), filename: 'home15_5.jpg')
 
+
+  # Bookings
+  booking1 = Booking.create(home_id: home10.id, user_id: user1.id, start_date: DateTime.new(2018,12,22,12), end_date: DateTime.new(2018,12,26,12))
+  booking2 = Booking.create(home_id: home11.id, user_id: user1.id, start_date: DateTime.new(2018,12,27,12), end_date: DateTime.new(2018,12,28,12))
+  booking3 = Booking.create(home_id: home7.id, user_id: user1.id, start_date: DateTime.new(2018,12,29,12), end_date: DateTime.new(2018,12,31,12))
 end 
 

@@ -8,7 +8,7 @@ class Home < ApplicationRecord
     class_name: :User
   
   has_many :bookings
-
+ 
   has_many_attached :photos
 
   def self.in_bounds(bounds)

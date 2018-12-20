@@ -15,9 +15,6 @@ class HomeMap extends React.Component{
   
 
   componentDidMount() {
-
-    
-
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
 
@@ -25,9 +22,8 @@ class HomeMap extends React.Component{
     this.MarkerManager.updateMarkers(this.props.homes);
     // debugger
     this.regularListener();
-
   }
-
+ 
   regularListener() {
     google.maps.event.addListener(this.map, 'idle', () => {
       
