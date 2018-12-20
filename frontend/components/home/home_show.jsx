@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BookingFormContainer from '../booking/booking_form_container';
 // import 'react-dates/initialize';
+import BookingCalendar from '../booking/booking_calendar'
 
 class HomeShow extends React.Component {
   constructor(props){
@@ -74,11 +75,15 @@ class HomeShow extends React.Component {
               <hr/>
             </div>
             <div className="show-booking-calendar">
-              <p>Where the Booking component goes</p>
+              <h4>Availability </h4>
+              <div>
+                <BookingCalendar />
+              </div>
               
             </div>
             <div className="show-reviews-container">
-              <p>Where the Reviews Component Goes</p>
+              <hr/>
+              <h4>Reviews</h4>
             </div>
 
           </div>

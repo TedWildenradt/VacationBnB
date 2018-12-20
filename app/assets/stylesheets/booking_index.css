@@ -1,0 +1,40 @@
+.Bookings-header{
+  display: flex;
+  justify-content: center;
+}
+
+.Bookings-header h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.bookings-index-item-container {
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.bookings-index-item-container ul {
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+}
+
+.booking-thumbnail	{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  border: 1px solid #e4e4e4;
+}
+
+.booking-thumbnail-photo {
+  width: 400px;
+  height: 267px;
+
+}
+
+.booking-thumbnail-photo img {
+  object-fit: contain;
+}
