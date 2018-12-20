@@ -13,6 +13,7 @@ class BookingForm extends React.Component{
       home_id: this.props.home_id
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuests = this.handleGuests.bind(this);
   }
 
   handleSubmit(e){
@@ -32,9 +33,16 @@ class BookingForm extends React.Component{
 
   }
 
+  handleGuests(){
+    return e => this.setState({
+      num_guests: e.target.value
+    })
+  }
+
 
   render(){
     const{home} = this.props
+
     return(
       <div className="booking-form-container">
         <form className="booking-form" onSubmit={this.handleSubmit}>
@@ -64,7 +72,7 @@ class BookingForm extends React.Component{
             <h5>Guests</h5>
           </div>
           <div className="booking-form-guest-input">
-            <input id="guests-button" className="booking-form-input" type="text" placeholder={`${home.num_guests} guests`}/>
+            <input id="guests-button" className="booking-form-input" type="text" min="1" max={home.num_guests} defaultValue={home.num_guests} placeholder={`${home.num_guests} guests max`}/>
           </div>
           <div className="booking-form-book">
             <input id="booking-button"className="booking-form-input" type="submit" value="Book"/>
