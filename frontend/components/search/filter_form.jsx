@@ -26,8 +26,8 @@ class FilterForm extends React.Component{
         <div className="price-filter">
           <GuestFilterContainer />
         </div>
-        <div id="clear-all-filters-btn">
-          <button onClick={this.clearFilters}>Clear All Filters</button>
+        <div className="clear-all-filters-btn">
+          <button id="clear-filters" onClick={this.clearFilters}>Clear All Filters</button>
         </div>
       </div>
     )

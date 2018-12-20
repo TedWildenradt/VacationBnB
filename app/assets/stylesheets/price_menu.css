@@ -11,16 +11,33 @@
   border: 1px solid black;
 }
 
+.price-filter {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
 .price-filter-bounds {
   display: flex;
   justify-content: space-between;
 }
 
+
 .range-slider {
   margin: 8px;
 }
 
-#clear-all-filters-btn {
+.clear-all-filters-btn {
   display: flex;
   justify-content: center;
+}
+
+#clear-filters {
+  text-align: center;
+  background-color: rgb(255, 90, 95);
+  color: white;
+  height: 37px;
+  width: 200px;
+  border-radius: 5px;
+  font-weight: 600;
 }
