@@ -5,6 +5,7 @@ class Api::BookingsController < ApplicationController
 
 
     if @booking.save
+      @bookings = Booking.all .where(user_id: current_user.id).includes(:home)
       render '/api/bookings/index'
     else 
       render json: @booking.errors.full_messages, status: 418

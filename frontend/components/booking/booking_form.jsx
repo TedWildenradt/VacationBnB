@@ -23,7 +23,7 @@ class BookingForm extends React.Component{
     if (!this.props.currentUser){
       this.props.openModal('Login')
     } else {
-      debugger
+      // debugger
       this.props.createBooking({
         start_date: this.state.start_date._d, 
         end_date: this.state.end_date._d,

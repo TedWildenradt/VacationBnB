@@ -86,6 +86,10 @@
   height: 42px;
 }
 
+.DateInput_input__focused {
+  border-bottom: none !important;
+}
+
 #start_date_id:hover {
   /* border-bottom: 2px solid #008489; */
   text-decoration: none;
