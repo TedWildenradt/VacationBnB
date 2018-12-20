@@ -5,6 +5,9 @@ class Api::HomesController < ApplicationController
     if params[:price]
       homes = homes.where(price: price_range)
     end 
+    if params[:num_guests]
+      homes = homes.where(num_guests: guests_range)
+    end
     @homes = homes 
     render :index
   end
@@ -25,6 +28,10 @@ class Api::HomesController < ApplicationController
   private
   def price_range
     (params[:price][0]..params[:price][1])
+  end
+
+  def guests_range
+    (params[:num_guests][0]..params[:num_guests][1])
   end
 
   def home_params

@@ -1,5 +1,6 @@
 import React from 'react';
 import PriceFilterContainer from './price_filter_container';
+import GuestFilterContainer from './guest_filter_container';
 
 class FilterForm extends React.Component{
 
@@ -22,9 +23,9 @@ class FilterForm extends React.Component{
         <div className="price-filter">
           <PriceFilterContainer />
         </div>
-        {/* <div className="guests-filter-button">
-          <button id="guests">Guests</button>
-        </div> */}
+        <div className="price-filter">
+          <GuestFilterContainer />
+        </div>
         <div id="clear-all-filters-btn">
           <button onClick={this.clearFilters}>Clear All Filters</button>
         </div>

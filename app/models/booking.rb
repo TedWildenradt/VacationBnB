@@ -5,5 +5,5 @@ class Booking < ApplicationRecord
   belongs_to :home
 
 
-  
+
 end

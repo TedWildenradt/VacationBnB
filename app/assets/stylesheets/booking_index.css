@@ -5,7 +5,8 @@
 
 .Bookings-header h2 {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 600;
+  padding-top: 15px;
 }
 
 .bookings-index-item-container {

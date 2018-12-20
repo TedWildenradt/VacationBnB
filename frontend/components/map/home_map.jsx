@@ -45,7 +45,7 @@ class HomeMap extends React.Component{
   }
 
   render() {
-    console.log(this.props)
+    
     return(
       <div id="map-container" ref={ map => this.mapNode = map }>
 
