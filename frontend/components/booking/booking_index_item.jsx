@@ -11,7 +11,8 @@ class BookingIndexitem extends React.Component{
   // }
   deleteBooking(){
     // debugger
-    this.props.deleteBooking(this.props.booking.id);
+    this.props.deleteBooking(this.props.booking.id)
+    .then( window.location.reload(), (err) => console.log(err))
   }
 
   render(){
