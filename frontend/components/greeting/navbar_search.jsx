@@ -27,6 +27,9 @@ class NavBarSearch extends React.Component {
       let num = Math.floor(Math.random() * 3);
       return cities[num];
     }
+    // if (this.props.query === undefined) {
+    //   return null
+    // }
     return (
       <div id="navbar-search-container">
         <form id="navbar-search-form" onSubmit={this.handleSubmit}>
@@ -34,6 +37,7 @@ class NavBarSearch extends React.Component {
             <input id="navbar-search-input"
               placeholder={`Try "${cityOption()}"`}
               onChange={this.handleInputChange()}
+              value={this.state.query}
             />
         </form>
       </div>

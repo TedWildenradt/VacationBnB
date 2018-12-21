@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
   let homes = Object.values(state.entities.homes).map( home => home)
   return ({
     homes: homes,
-    query: ''
+    query: state.ui.filters.query || ''
   })
 }
 
