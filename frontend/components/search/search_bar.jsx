@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
           <input
             placeholder={`Try "${cityOption()}"`}
             onChange={this.handleInputChange()}
-            value={this.state.query}
+            
           />
         </label>
       </form>
