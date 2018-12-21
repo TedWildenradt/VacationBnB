@@ -41,12 +41,13 @@ class HomeMap extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
-    
+
     const mapOptions = getLocationDetails(this.props.query)
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
 
     this.MarkerManager.updateMarkers(this.props.homes);
+    // this.regularListener()
 
   }
 
