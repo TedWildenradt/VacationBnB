@@ -24,13 +24,13 @@ class HomeMap extends React.Component{
 
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.homes);
-    // debugger
+    debugger
     this.regularListener();
   }
  
   regularListener() {
     google.maps.event.addListener(this.map, 'idle', () => {
-      
+      // debugger
       const{north, south, east, west} = this.map.getBounds().toJSON();
       const bounds = {
         northEast: {lat: north, lng: east},
@@ -41,11 +41,13 @@ class HomeMap extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
-
+    // debugger
+    if (prevProps.query !== this.props.query){
     const mapOptions = getLocationDetails(this.props.query)
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-
+    this.regularListener()
+    }
     this.MarkerManager.updateMarkers(this.props.homes);
     // this.regularListener()
 
