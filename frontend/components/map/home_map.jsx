@@ -41,18 +41,13 @@ class HomeMap extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
- 
+    
+    const mapOptions = getLocationDetails(this.props.query)
+    this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
+
     this.MarkerManager.updateMarkers(this.props.homes);
 
-    // if (this.props.query.toLowerCase() === 'san francisco'){
-    //   // debugger
-    //   if (this.props.location.path !== prevProps.location.path) {
-    //     console.log(this.map.getZoom())
-    //     this.map.setCenter({ lat: 37.7758, lng: -122.435 })
-    //     this.map.setZoom(12)
-    //   }
-
-    // }
   }
 
   render() {
