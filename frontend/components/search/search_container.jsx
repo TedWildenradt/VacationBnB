@@ -9,7 +9,9 @@ const mapStateToProps = (state) => {
   return ({
     homes: homes,
     price: state.ui.filters.price,
-    num_guests: state.ui.filters.num_guests
+    num_guests: state.ui.filters.num_guests,
+    query: state.ui.filters.query
+
   })
 }
 

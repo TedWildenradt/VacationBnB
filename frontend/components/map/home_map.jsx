@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MarkerManager from '../../util/marker_manager';
+import getLocationDetails from '../../util/map_util';
 
-const mapOptions = {
-  // center: { lat: 37.7758, lng: -122.435 }, // this is SF
-  center: { lat: 39.012435, lng: -101.434000 }, // this is USA
-  // zoom: 12 //This is SF
-  zoom: 3
-};
+// let mapOptions = {
+//   // center: { lat: 37.7758, lng: -122.435 }, // this is SF
+//   center: { lat: 39.012435, lng: -101.434000 }, // this is USA
+//   // zoom: 12 //This is SF
+//   zoom: 3
+// };
 class HomeMap extends React.Component{
   constructor(props) {
     super(props)
   }
-  
 
-  componentDidMount() {
-    console.log(this.props)
+  componentDidMount() {                                                                         
+    // console.log(this.props)
+    const mapOptions = getLocationDetails(this.props.query)
+
+
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
 
@@ -37,9 +40,19 @@ class HomeMap extends React.Component{
     })
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
  
     this.MarkerManager.updateMarkers(this.props.homes);
+
+    // if (this.props.query.toLowerCase() === 'san francisco'){
+    //   // debugger
+    //   if (this.props.location.path !== prevProps.location.path) {
+    //     console.log(this.map.getZoom())
+    //     this.map.setCenter({ lat: 37.7758, lng: -122.435 })
+    //     this.map.setZoom(12)
+    //   }
+
+    // }
   }
 
   render() {
