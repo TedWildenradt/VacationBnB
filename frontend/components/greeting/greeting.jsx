@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import Lifecycle from 'react-pure-lifecycle';
 import SearchBarContainer from '../search/search_bar_container';
+import NavBarSearchContainer from './navbar_search_container';
 
 
 const componentDidUpdate = ({location}) => {
@@ -11,6 +12,7 @@ const componentDidUpdate = ({location}) => {
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
+    document.getElementById("navbar-search-container").style.display = "none"
     var divs = document.querySelectorAll('.greeting');
     for (var i = 0; i < divs.length; i++) {
     divs[i].classList.add('white');
@@ -19,6 +21,7 @@ const componentDidUpdate = ({location}) => {
     document.getElementsByClassName("greeting")[0].style.color = "rgb(72, 72, 72)";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid lightgrey"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "white"
+    document.getElementById("navbar-search-container").style.display = "block"
     var divs = document.querySelectorAll('.white');
     for (var i = 0; i < divs.length; i++) {
     divs[i].classList.remove('white');
@@ -31,6 +34,7 @@ const componentDidMount = ({location}) => {
     document.getElementsByClassName("greeting")[0].style.color = "white";
     document.getElementsByClassName("sticky")[0].style.borderBottom = "1px solid transparent"
     document.getElementsByClassName("sticky")[0].style.backgroundColor = "transparent"
+    document.getElementById("navbar-search-container").style.display = "none"
     var divs = document.querySelectorAll('.greeting');
     for (var i = 0; i < divs.length; i++) {
     divs[i].classList.add('white');
@@ -61,6 +65,9 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       <div className="logo">
         <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
       </div>
+      <div>
+        <NavBarSearchContainer />
+      </div>
       <ul className="logged-out">
         <li><button><Link className="color-change" to="/homes" id="explore" >Explore Available Homes</Link></button></li>
         <li><button className="color-change" id="signup-link" onClick={() => openModal('Sign Up')}>Sign Up</button></li>  
@@ -73,6 +80,9 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
     <div className="greeting greeting-welcome">
       <div className="logo">
         <Link to="/homes"><img id="logo" src="http://pluspng.com/img-png/airbnb-logo-png--880.png" alt="Airbnb Logo PNG"/></Link>
+      </div>
+      <div>
+        <NavBarSearchContainer />
       </div>
       <ul className="welcome-message-logged-in">
         <li><button className="color-change"><Link to="/homes" id="explore" >Explore Available Homes</Link></button></li>
