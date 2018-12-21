@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
     e.preventDefault()
     this.props.updateFilters('query', this.state.query)
     .then(() => this.props.history.push('/homes'), (err) => console.log(err))
-  }
+  } 
  
   render() {
     const cityOption = () => {
