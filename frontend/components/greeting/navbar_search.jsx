@@ -18,7 +18,7 @@ class NavBarSearch extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     this.props.updateFilters('query', this.state.query)
-    // .then(() => this.props.history.push('/homes'), (err) => console.log(err))
+    .then(() => this.props.history.push('/homes'), (err) => console.log(err))
   }
  
   render() {
