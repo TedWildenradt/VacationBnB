@@ -12,3 +12,19 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 * Google Maps Api
 * HTML & CSS
 
+## Splash Page
+
+
+## Homes Listing Page
+
+
+## Individual Listing page
+
+
+## Booking Calendar
+
+
+## Trips Page
+
+
+##
