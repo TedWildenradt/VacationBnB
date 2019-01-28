@@ -2,7 +2,7 @@
 
 # VacationBnB
 
-VacationBnb is a full-stack single-page web application inspired by AirBnB. The frontend utilizes React.js with Redux while the backend utilizes the Ruby on Rails framework with PostGresQL.
+VacationBnb is a full-stack single-page web application inspired by AirBnB. The frontend utilizes React.js with Redux while the backend utilizes the Ruby on Rails framework with PostgreSQL.
 
 ## Technologies Used:
 * React.js
