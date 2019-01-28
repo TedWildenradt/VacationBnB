@@ -56,13 +56,13 @@ class BookingForm extends React.Component{
           </div>
           <div className="date-range-picker">
           <DateRangePicker
-          startDate={this.state.start_date} // momentPropTypes.momentObj or null,
-          startDateId="start_date_id" // PropTypes.string.isRequired,
-          endDate={this.state.end_date} // momentPropTypes.momentObj or null,
-          endDateId="end_date_id" // PropTypes.string.isRequired,
+          startDate={this.state.start_date} 
+          startDateId="start_date_id" 
+          endDate={this.state.end_date} 
+          endDateId="end_date_id" 
           onDatesChange={({ startDate, endDate }) => this.setState({ start_date: startDate, end_date: endDate })}
-          focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-          onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+          focusedInput={this.state.focusedInput} 
+          onFocusChange={focusedInput => this.setState({ focusedInput })} 
           startDatePlaceholderText="Check in"
           endDatePlaceholderText="Check out"
           numberOfMonths={1}

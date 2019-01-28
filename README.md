@@ -54,12 +54,29 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 ## Individual Listing page
 * This page shows all the information regarding a specific home selection.
 * Users can view all photos and relevant information regarding the home.
+
 ![](./readme_gifs/VBB_show_page.gif)
 
 
 ## Booking Calendar
 * Users can select specific dates for the booking through the dropdown calendar:
+
 ![](./readme_gifs/VBB_bookings_calender.gif)
+
+```
+  <DateRangePicker
+  startDate={this.state.start_date} 
+  startDateId="start_date_id" 
+  endDate={this.state.end_date} 
+  endDateId="end_date_id" 
+  onDatesChange={({ startDate, endDate }) => this.setState({ start_date: startDate, end_date: endDate })}
+  focusedInput={this.state.focusedInput} 
+  onFocusChange={focusedInput => this.setState({ focusedInput })} 
+  startDatePlaceholderText="Check in"
+  endDatePlaceholderText="Check out"
+  numberOfMonths={1}
+  />
+```
 
 
 
