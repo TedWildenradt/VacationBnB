@@ -16,6 +16,7 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 ## Splash Page
 * Home page for the site.
 * Users can signup, login, or search for listings by location.
+![](./readme_gifs/VBB_splash_page.gif)
 * Modal for login/signup is implemented through Redux and React, allowing modular re-use throughout the site.
 
 
@@ -23,16 +24,18 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 ## Homes Listing Page
 * Displays homes in an organized layout with a responsive design for different screen sizes.
 * Users can filter their selections by price and number of guests.
-* Users can also filter the available homes by moving the map to only focus on a specific location. This is accomplished by only querying the backend for homes within the bounds of the google maps window.
 ![](./readme_gifs/VBB_filters.gif)
+* Users can also filter the available homes by moving the map to only focus on a specific location. This is accomplished by only querying the backend for homes within the bounds of the google maps window.
 
 ## Individual Listing page
 * This page shows all the information regarding a specific home selection.
 * Users can view all photos and relevant information regarding the home.
+![](./readme_gifs/VBB_show_page.gif)
 * Users can also book the home through the calendar.
 
 
 ## Booking Calendar
+*
 
 
 ## Trips Page
