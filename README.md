@@ -11,7 +11,7 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 * Ruby on Rails
 * PostgreSQL
 * Google Maps API
-* HTML & CSS
+* HTML5 & CSS3
 
 ## Splash Page
 * Home page for the site.
@@ -81,6 +81,7 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 
 
 ## Trips Page
-
+* This page shows both past trips and currently planned trips with the option to cancel a reservation.
+![](./readme_gifs/VBB-trips.png)
 
 ##
