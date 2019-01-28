@@ -1,24 +1,30 @@
-# README
+[Link to Live Site](https://vacationbnb.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# VacationBnB
 
-Things you may want to cover:
+VacationBnb is a full-stack single-page web application inspired by AirBnB. The frontend utilizes React.js with Redux while the backend utilizes the Ruby on Rails framework with PostGresQL.
 
-* Ruby version
+## Technologies Used:
+* React.js
+* Redux
+* Javascript
+* Ruby on Rails
+* Google Maps Api
+* HTML & CSS
 
-* System dependencies
+## Splash Page
 
-* Configuration
 
-* Database creation
+## Homes Listing Page
 
-* Database initialization
 
-* How to run the test suite
+## Individual Listing page
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Booking Calendar
 
-* ...
+
+## Trips Page
+
+
+##
