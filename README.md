@@ -18,6 +18,18 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 * Users can signup, login, or search for listings by location.
 ![](./readme_gifs/VBB_splash_page.gif)
 * Modal for login/signup is implemented through Redux and React, allowing modular re-use throughout the site.
+```
+  return ({
+    action: (user) => dispatch(login(user)),
+    otherForm: (
+      <button onClick={() => dispatch(openModal('signup'))}>
+        Signup
+      </button>
+    ),
+    closeModal: () => dispatch(closeModal()),
+    openModal: (formtype) => dispatch(openModal(formtype))
+  })
+```
 
 
 
@@ -43,7 +55,6 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 * This page shows all the information regarding a specific home selection.
 * Users can view all photos and relevant information regarding the home.
 ![](./readme_gifs/VBB_show_page.gif)
-* Users can also book the home through the calendar.
 
 
 ## Booking Calendar
