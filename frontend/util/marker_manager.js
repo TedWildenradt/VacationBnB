@@ -5,7 +5,6 @@ export default class MarkerManager {
   }
 
   updateMarkers(homes) {
-    // console.log('time to update');
     const homesObj = {};
     homes.forEach(home => homesObj[home.id] = home);
 

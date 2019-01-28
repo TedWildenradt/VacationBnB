@@ -3,34 +3,30 @@ import ReactDOM from 'react-dom';
 import MarkerManager from '../../util/marker_manager';
 import getLocationDetails from '../../util/map_util';
 
-// let mapOptions = {
-//   // center: { lat: 37.7758, lng: -122.435 }, // this is SF
-//   center: { lat: 39.012435, lng: -101.434000 }, // this is USA
-//   // zoom: 12 //This is SF
-//   zoom: 3
-// };
+
 class HomeMap extends React.Component{
   constructor(props) {
     super(props)
   }
 
   componentDidMount() {                                                                         
-    // console.log(this.props)
+    // Centers the map based on the search query
     const mapOptions = getLocationDetails(this.props.query)
 
-
-    // wrap this.mapNode in a Google Map
+    // Creates the map object
     this.map = new google.maps.Map(this.mapNode, mapOptions);
 
+    // Creates the markers to be placed on the map
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.homes);
-    debugger
+
+    // Listens for the user moving the map and adjusting the search results to only the homes in the map window
     this.regularListener();
   }
- 
+  
+  // Listens for changes to the map window
   regularListener() {
     google.maps.event.addListener(this.map, 'idle', () => {
-      // debugger
       const{north, south, east, west} = this.map.getBounds().toJSON();
       const bounds = {
         northEast: {lat: north, lng: east},
@@ -41,15 +37,14 @@ class HomeMap extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
-    // debugger
+
     if (prevProps.query !== this.props.query){
-    const mapOptions = getLocationDetails(this.props.query)
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
-    this.regularListener()
+      const mapOptions = getLocationDetails(this.props.query)
+      this.map = new google.maps.Map(this.mapNode, mapOptions);
+      this.MarkerManager = new MarkerManager(this.map);
+      this.regularListener()
     }
     this.MarkerManager.updateMarkers(this.props.homes);
-    // this.regularListener()
 
   }
 

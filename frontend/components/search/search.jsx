@@ -13,7 +13,7 @@ class Search extends React.Component{
   render() {
 
     const {homes, fetchHomes, updateFilters, minPrice, maxPrice, num_guests, resetFilters, location, query} = this.props;
-    // console.log(this.props)
+
     return(
       <div>
         <div className="homes-map-container">

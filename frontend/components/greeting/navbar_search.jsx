@@ -22,6 +22,7 @@ class NavBarSearch extends React.Component {
   }
  
   render() {
+    // Prefilled placeholders for the input to prompt the user for which cities to search.
     const cityOption = () => {
       const cities = ['Los Angeles', 'San Francisco', 'New York'];
       let num = Math.floor(Math.random() * 3);

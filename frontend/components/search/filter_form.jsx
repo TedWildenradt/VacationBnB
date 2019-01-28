@@ -3,21 +3,17 @@ import PriceFilterContainer from './price_filter_container';
 import GuestFilterContainer from './guest_filter_container';
 
 class FilterForm extends React.Component{
-
   constructor(props){
     super(props)
-    // this.state = {
-    //   price: props.price,
-    //   num_guests: props.num_guests
-    // }
     this.clearFilters = this.clearFilters.bind(this)
   }
+
   clearFilters(){
     this.props.resetFilters()
   }
 
   render() {
-    // console.log(this.props)
+
     return(
       <div className="filter-form">
         <div className="price-filter">

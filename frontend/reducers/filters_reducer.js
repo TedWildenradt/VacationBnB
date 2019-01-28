@@ -15,10 +15,12 @@ const filtersReducer = (state=initialFilters, action) => {
     case UPDATE_FILTERS:
       let newState = merge({}, state)
       let newFilter = { [action.filter]: action.value}
-            // debugger
+
+      // Resets bounds when searching a new city
       if (action.filter === 'query'){
         newState['bounds'] = {}
       }
+      
       return merge({}, newState, newFilter);
     case CLEAR_FILTERS: 
       return initialFilters;

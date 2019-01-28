@@ -8,7 +8,6 @@ class HomeShow extends React.Component {
   constructor(props){
     super(props)
     this.state = this.props.home
-    // debugger
   }
 
   componentDidMount() {
@@ -19,7 +18,7 @@ class HomeShow extends React.Component {
   }
 
   render () {
-    // debugger
+
     if (this.props.home.photoUrls === undefined) {
       return null
     }
@@ -27,7 +26,6 @@ class HomeShow extends React.Component {
       <div>
 
         <div className="show-photos-container">
-          {/* <img src={this.props.home.photoUrls[0]} alt="home"/> */}
           <ul className="photo-grid">
             <li className="photo-1" id="photo-1"><img src={this.props.home.photoUrls[0]} alt="home"/></li>
             <li className="photo-2"><img src={this.props.home.photoUrls[1]} alt="home"/></li>
@@ -59,7 +57,7 @@ class HomeShow extends React.Component {
             </div>
             <div className="show-home-description">
               <p>{this.props.home.description}</p>
-              {/* <hr/> */}
+
             </div>
             <div className="show-home-amenities">
               <hr/>

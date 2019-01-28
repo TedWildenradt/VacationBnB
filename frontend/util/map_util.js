@@ -16,7 +16,7 @@ const getNYLocation = () => ({
 })
 
 const standardOptions = () => ({
-  center: { lat: 39.012435, lng: -101.434000 }, // this is USA
+  center: { lat: 39.012435, lng: -101.434000 },
   zoom: 3
 })
 

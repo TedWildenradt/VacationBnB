@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Searchbar present on the header anywhere that is not the splash page
 class SearchBar extends React.Component {
   constructor(props){
     super(props)

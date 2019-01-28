@@ -5,9 +5,7 @@ import {fetchHome} from '../../actions/home_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
-  // let home = state.entities.homes[ownProps.match.params.id]
-  // debugger
+
   return ({
     home: state.entities.homes[ownProps.match.params.id] || {}
   })

@@ -8,6 +8,8 @@ function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
+
+  // Determines which form to show in the modal
   let component;
   switch (modal) {
     case 'Login':

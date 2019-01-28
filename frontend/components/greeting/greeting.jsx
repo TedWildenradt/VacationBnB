@@ -5,7 +5,8 @@ import Lifecycle from 'react-pure-lifecycle';
 import SearchBarContainer from '../search/search_bar_container';
 import NavBarSearchContainer from './navbar_search_container';
 
-
+// Plain JS to handle different font colors and actions depending on whether the user is on the splash Page
+// Or on any other page.
 const componentDidUpdate = ({location}) => {
   
   if(location.pathname === '/'){
@@ -51,7 +52,7 @@ const methods = {
 
 const Greeting = ({currentUser, logout, openModal, location}) => {
 
-  // console.log(location)
+
   if(location.pathname === '/'){
     document.body.style.backgroundImage = "url(https://s3-us-west-1.amazonaws.com/vacationbnb-dev/airbnb_backsplash.jpg)";
 
@@ -59,7 +60,7 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
     document.body.style.backgroundImage = "none";
   }
 
-
+  // Header shown if the user is not logged in
   const sessionbuttons = () => (
     <div className="greeting greeting-links">
       <div className="logo">
@@ -75,7 +76,8 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       </ul>
     </div>
   )
-
+  
+  // Header shown if the user is logged in
   const greetingHeading = () => (
     <div className="greeting greeting-welcome">
       <div className="logo">
@@ -91,7 +93,8 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       </ul>
     </div>
   )
-
+  
+  // Search bar that is only shown on the splash page
   const bigSearchBar = () => (
     <div className="big-search-container">
       <div className="big-search-bar">
@@ -99,10 +102,11 @@ const Greeting = ({currentUser, logout, openModal, location}) => {
       </div>
     </div>
   )
-
+  
+  // Determines whether to show the big search bar if the user is on the splash page
   const centerSearch = location.pathname === '/' ? bigSearchBar() : <div></div>;
 
-
+  // Determines which header options to show depending on whether the user is logged in
   const headingOptions = currentUser ? greetingHeading() : sessionbuttons();
 
   return(
