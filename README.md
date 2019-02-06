@@ -39,7 +39,12 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 ## Homes Listing Page
 * Displays homes in an organized layout with a responsive design for different screen sizes.
 * Users can filter their selections by price and number of guests.
-![](./readme_gifs/VBB_filters.gif)
+
+
+<p align="center">
+<img align="center" width="70%" src="./readme_gifs/VBB_filters.gif">
+</p>
+
 * Users can also filter the available homes by moving the map to only focus on a specific location. This is accomplished by only querying the backend for homes within the bounds of the google maps window.
 ```
     homes = params[:bounds] ? Home.with_attached_photos.in_bounds(params[:bounds]) : Home.with_attached_photos.all
@@ -58,13 +63,19 @@ VacationBnb is a full-stack single-page web application inspired by AirBnB. The 
 * This page shows all the information regarding a specific home selection.
 * Users can view all photos and relevant information regarding the home.
 
-![](./readme_gifs/VBB_show_page.gif)
+
+<p align="center">
+<img align="center" width="70%" src="./readme_gifs/VBB_show_page.gif">
+</p>
 
 
 ## Booking Calendar
 * Users can select specific dates for the booking through the dropdown calendar:
 
-![](./readme_gifs/VBB_bookings_calender.gif)
+
+<p align="center">
+<img align="center" width="70%" src="./readme_gifs/VBB_bookings_calender.gif">
+</p>
 
 ```
   <DateRangePicker
